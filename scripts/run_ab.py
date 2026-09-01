@@ -32,7 +32,6 @@ sys.path.insert(0, str(VENDOR_SRC))
 sys.path.insert(0, str(ROOT / "src"))
 
 from dataset import get_benchmark_dir            # noqa: E402  (vendor)
-from reproduce import assemble_runs              # noqa: E402  (vendor)
 import metrics_summary                           # noqa: E402  (vendor)
 from docx_metrics import (                       # noqa: E402  (vendor)
     compute_surgicalness,
@@ -106,9 +105,48 @@ def run_arm(arm: str, tasks_path: Path, jobs_dir: Path, *, model: str,
     return max(after, key=lambda p: p.stat().st_mtime)
 
 
-def latest_job(jobs_dir: Path) -> Path | None:
+def all_jobs(jobs_dir: Path) -> list[Path]:
     dirs = [p for p in jobs_dir.iterdir() if p.is_dir()] if jobs_dir.is_dir() else []
-    return max(dirs, key=lambda p: p.stat().st_mtime) if dirs else None
+    return sorted(dirs, key=lambda p: p.stat().st_mtime)
+
+
+def assemble_job(job_dir: Path, runs_dir: Path, *, model_id: str) -> int:
+    """Convert a Harbor job tree into the runs/ layout metrics expects.
+
+    Like the vendor's `reproduce.assemble_runs`, but tolerant of Harbor
+    0.22's nested `artifacts/app/...` layout, and it also collects the
+    apparatus audit trail (rules/triage/gate_report) per trial."""
+    n = 0
+    for trial in sorted(job_dir.iterdir()):
+        if not trial.is_dir() or "__" not in trial.name:
+            continue
+        task = trial.name.rsplit("__", 1)[0]
+        grade = trial / "verifier" / "grade.json"
+        if not grade.exists():
+            print(f"  skip {trial.name}: no verifier/grade.json")
+            continue
+        docx = trial / "artifacts" / "contract.docx"
+        if not docx.exists():
+            docx = trial / "artifacts" / "app" / "contract.docx"
+        dest = runs_dir / "trajectories" / model_id / task
+        dest.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(grade, dest / "grade.json")
+        if docx.exists():
+            shutil.copy2(docx, dest / "redline.docx")
+        judges = trial / "verifier" / "judges"
+        if judges.is_dir():
+            for jf in judges.glob("*.json"):
+                d = runs_dir / "panel" / "judges" / jf.stem / model_id
+                d.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(jf, d / f"{task}.json")
+        apparatus = trial / "artifacts" / "app" / ".apparatus"
+        if apparatus.is_dir():
+            d = runs_dir / "apparatus" / model_id / task
+            d.mkdir(parents=True, exist_ok=True)
+            for f in apparatus.glob("*.json"):
+                shutil.copy2(f, d / f.name)
+        n += 1
+    return n
 
 
 def surgicalness_table(runs_dir: Path, bench: Path, arm_labels: list[str],
@@ -157,19 +195,22 @@ def main() -> int:
     labels = []
     for arm in arms:
         jobs_dir = work / "jobs" / arm
-        if args.report_only:
-            job = latest_job(jobs_dir)
-            if job is None:
-                print(f"(no jobs for arm {arm}; skipping)")
-                continue
-        else:
-            job = run_arm(arm, tasks_path, jobs_dir, model=args.model,
-                          n_concurrent=args.n_concurrent, env_file=ROOT / ".env")
+        if not args.report_only:
+            run_arm(arm, tasks_path, jobs_dir, model=args.model,
+                    n_concurrent=args.n_concurrent, env_file=ROOT / ".env")
+        # Assemble every job for this arm, oldest first, so the newest
+        # trial of a task wins. Lets smoke jobs count toward the report.
         label = f"{args.model.rsplit('/', 1)[-1]}-{arm}"
-        n = assemble_runs(job, runs_dir, model_id=label)
-        print(f"arm {arm}: assembled {n} trial(s) from {job.name}")
-        if n:
+        total = 0
+        for job in all_jobs(jobs_dir):
+            n = assemble_job(job, runs_dir, model_id=label)
+            total += n
+            if n:
+                print(f"arm {arm}: assembled {n} trial(s) from {job.name}")
+        if total:
             labels.append(label)
+        else:
+            print(f"(no trials for arm {arm})")
 
     if not labels:
         sys.exit("nothing assembled")
