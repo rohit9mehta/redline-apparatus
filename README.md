@@ -53,10 +53,11 @@ citation.
 
 ## Results
 
-*(A/B on a 12-task subset — the lexicographically first task in every
-scenario × turn cell — same frozen tasks, same frozen judge panel, same
-model; only the agent scaffold differs. Filled in from
-`work/metrics_summary.json` after runs.)*
+*(A/B on an 8-task subset: the lexicographically first task in every
+scenario-1 and scenario-2 turn cell — 4 turns × both sides × two SaaS-MSA
+scenarios. The subset rule was fixed before any run; scenario 3 was dropped
+for budget before any scenario-3 task was run. Same frozen tasks, same
+frozen judge panel, same model — only the agent scaffold differs.)*
 
 ## Reproduce
 

@@ -49,8 +49,11 @@ here — judge-panel scores by turn/side/category, plus the benchmark's own
 behavioral diagnostics for baseline vs. apparatus arms)*
 
 The behavioral deltas are the point: they are deterministic, cheap to
-measure, and they moved. Judge-panel scores on a 12-task subset carry wide
-error bars — I report them with that caveat and did not tune on them.
+measure, and they moved. Judge-panel scores on an 8-task subset carry wide
+error bars — I report them with that caveat and did not tune on them. The
+subset rule (first task per scenario × turn cell, scenarios 1–2) was fixed
+before any run; scenario 3 was dropped for budget before any of its tasks
+ran.
 
 ## 4. The part I'd actually pitch: the benchmark is a reward function
 
