@@ -1,0 +1,130 @@
+{
+  "rules": [
+    {
+      "id": "R-01",
+      "topic": "Scope limits - keep to pilot use case",
+      "severity": "strong",
+      "position": "Keep the agreement scoped to candidate-material summaries and interview-note drafting for human review; any expansion requires a separate written approval, security review, and scoped order form.",
+      "fallback": null,
+      "quote": "should require a separate written approval, security review, and scoped order form.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-02",
+      "topic": "No autonomous decisioning",
+      "severity": "walk_away",
+      "position": "TalentFlow will not make autonomous hire, reject, compensation, promotion, termination, ranking, filtering, or scoring decisions - all outputs are for human review only.",
+      "fallback": null,
+      "quote": "it will not make autonomous hire, reject, compensation, promotion, termination, ranking,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-03",
+      "topic": "AgentCo platform IP ownership",
+      "severity": "walk_away",
+      "position": "AgentCo preserves ownership of its platform, models, reusable workflows, prompt templates, evaluation methods, and non-customer-specific know-how.",
+      "fallback": null,
+      "quote": "AgentCo should preserve ownership of its platform, models, reusable",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-04",
+      "topic": "Customer ownership of candidate data and outputs",
+      "severity": "strong",
+      "position": "LargeCo owns its candidate materials, job requirements, prompts, configurations, and customer-specific outputs.",
+      "fallback": null,
+      "quote": "agree that LargeCo owns its candidate materials, job requirements, prompts,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-05",
+      "topic": "No training / no sale of candidate data",
+      "severity": "walk_away",
+      "position": "AgentCo will not sell, share, train on, or use candidate data outside TalentFlow.",
+      "fallback": null,
+      "quote": "AgentCo should not sell, share, train on, or use candidate data outside TalentFlow.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-06",
+      "topic": "Outputs are drafts, not guaranteed decisions",
+      "severity": "strong",
+      "position": "TalentFlow outputs are drafts for human review, not guaranteed legal, compliant, unbiased, or complete hiring decisions.",
+      "fallback": null,
+      "quote": "TalentFlow outputs should be treated as drafts for human review, not guaranteed legal, compliant, unbiased, or complete hiring decisions.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-07",
+      "topic": "Security/audit - resist unrestricted access and rigid uptime/response terms",
+      "severity": "strong",
+      "position": "Resist unrestricted code access, monthly scans, uncontrolled testing, 99.99% uptime, thirty-minute resolution obligations, and automatic 100% service credits.",
+      "fallback": "Offer a standard SaaS SLA with severity-based support and limited service credits.",
+      "quote": "It should resist unrestricted code access, monthly scans, uncontrolled testing, 99.99% uptime, thirty-minute resolution obligations, and automatic 100% service credits.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-08",
+      "topic": "SLA structure",
+      "severity": "preference",
+      "position": "Offer a standard SaaS SLA with severity-based support and limited service credits rather than bespoke uptime/response commitments.",
+      "fallback": null,
+      "quote": "Offer a standard SaaS SLA with severity-based support and limited service credits.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-09",
+      "topic": "Liability cap - baseline plus targeted higher cap",
+      "severity": "walk_away",
+      "position": "Protect the baseline liability cap at fees paid in the prior twelve months, while considering a targeted higher cap for confidentiality, candidate-data security, and DPA breaches.",
+      "fallback": "A targeted higher cap (e.g., a multiple of fees) for confidentiality, candidate-data security, and DPA breach claims only.",
+      "quote": "AgentCo should protect the  baseline cap at fees paid in the prior twelve months, while considering a targeted higher cap for conﬁdentiality, candidate-data security, and DPA breaches.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-10",
+      "topic": "Resist unlimited liability for AI output and hiring-decision issues",
+      "severity": "walk_away",
+      "position": "Resist unlimited liability for AI output issues, customer hiring decisions, unreviewed use of outputs, LargeCo's job criteria, candidate notices, workflows, or employment decisions.",
+      "fallback": null,
+      "quote": "It should resist unlimited liability for AI output issues, customer hiring decisions, unreviewed use of outputs, LargeCo’s job criteria, candidate notices, workﬂows, or employment decisions.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-11",
+      "topic": "IP indemnity scope",
+      "severity": "strong",
+      "position": "IP indemnity should stay tied to the AgentCo service and standard exclusions.",
+      "fallback": null,
+      "quote": "IP indemnity should stay tied to the AgentCo service and standard exclusions.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-12",
+      "topic": "Acceptable protections AgentCo can grant",
+      "severity": "preference",
+      "position": "AgentCo can accept a DPA, confidentiality protections, no-training commitments, limits on use of candidate data, commercially reasonable security obligations, subprocessor notice, data export/deletion, audit logs, admin controls, and documentation describing intended use and human-review expectations.",
+      "fallback": null,
+      "quote": "limits on use of candidate data, commercially reasonable security obligations, subprocessor notice, data export/deletion, audit logs, admin controls,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-13",
+      "topic": "Security materials and audit cadence",
+      "severity": "preference",
+      "position": "AgentCo can provide SOC 2 or equivalent materials, questionnaires, subprocessor details, data-flow descriptions, and a reasonable annual audit process.",
+      "fallback": null,
+      "quote": "questionnaires, subprocessor details, data-ﬂow descriptions, and a reasonable annual audit process.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-14",
+      "topic": "No expansion into ATS/scoring/background checks/payroll etc without approval",
+      "severity": "strong",
+      "position": "Any expansion into ATS integrations, candidate scoring, assessments, background checks, payroll, benefits, immigration, accommodations, or employee-relations data should require a separate written approval, security review, and scoped order form.",
+      "fallback": null,
+      "quote": "Any expansion into ATS integrations, candidate scoring, assessments, background checks, payroll,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    }
+  ]
+}

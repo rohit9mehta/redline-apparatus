@@ -44,18 +44,42 @@ same model — the only change is the scaffold.
 
 ## 3. What changed (A/B on the frozen harness)
 
-*(results table from `work/metrics_summary.json` + `surgicalness.json` goes
-here — judge-panel scores by turn/side/category, plus the benchmark's own
-behavioral diagnostics for baseline vs. apparatus arms)*
+Sixteen trials: 8 tasks (first task per scenario × turn cell, scenarios
+1–2; rule fixed before any run) × {stock claude-code, apparatus}, same
+model, same frozen judges. Two results, pointing in opposite directions:
 
-The behavioral deltas are the point: they are deterministic, cheap to
-measure, and they moved. Judge-panel scores on an 8-task subset carry wide
-error bars — I report them with that caveat and did not tune on them. The
-subset rule (first task per scenario × turn cell, scenarios 1–2) was fixed
-before any run; scenario 3 was dropped for budget before any of its tasks
-ran.
+**Form moved.** The baseline reproduces the published frontier failure
+profile almost exactly — 73% block edits at 352 chars/edit vs. the
+attorneys' 34% / 84. The apparatus arm lands at 45% / 215, most of the way
+to attorney norms, measured with the benchmark's own `docx_metrics.py`.
+Grounding held everywhere: 127/127 rule-card quotes verbatim (0
+fabricated), 259 clause-level dispositions, 8/8 gates green.
+
+**Judgment did not.** Panel scores: baseline 48.8 [31.5–65.6] vs.
+apparatus 40.2 [26.7–52.8] — statistically indistinguishable at this n,
+with the decline concentrated in deal-closing orientation (65→22) and
+counterparty-acceptance prediction (50→25); legal correctness flat. The
+over-acceptance bias, measured on reject-shaped rubrics, did not improve.
+
+I did not tune on the judges, and I'm reporting the miss as prominently as
+the hit. The honest synthesis: **deterministic verification buys you
+everything deterministic verifiers can see — drafting shape, citation
+integrity, coverage discipline — and none of the strategic judgment the
+rubrics actually grade.** RedlineBench's rubric layer resisted process
+scaffolding. That is a compliment to the benchmark: it is measuring the
+thing that can't be prompted in.
 
 ## 4. The part I'd actually pitch: the benchmark is a reward function
+
+The A/B above is why this section matters more, not less. If scaffolding
+could buy judgment at inference time, the training story would be
+optional. It can't — form is scaffoldable, judgment has to come from the
+weights — and I've seen this exact split before: in my Sanskrit pipeline,
+the analyzer's *morphology* was fixable with verifiers, but an override
+audit showed the remaining errors were *interpretive* (46% compound-
+boundary judgments that only the commentary resolves). Same shape here:
+the gate fixes mechanics; the rubric-graded judgment is the part that
+needs supervised signal.
 
 RedlineBench contains everything needed to *train* the behavior, not just
 measure it: attorney-authored rubrics with weights, penalty rubrics, and
@@ -74,8 +98,11 @@ with a grammar engine in the training loop:
 For a firm that pays inference on every contract, that cost curve is margin.
 The path here is the same one I already walked end-to-end, solo:
 
-1. **Scaffold** (this repo): prove the failure modes respond to grounding +
-   deterministic gating. No training, no contamination risk.
+1. **Scaffold** (this repo, done): establish which failure modes respond to
+   grounding + deterministic gating (drafting form, citation integrity,
+   disposition discipline) and which don't (strategic judgment). No
+   training, no contamination risk — and the split defines what the
+   training signal must carry.
 2. **Verifier-filtered data**: generate negotiation trajectories on *held-out
    scenarios* (RedlineBench has 3 — the test set must stay frozen; new
    scenarios are cheap to synthesize from playbook + template pairs, and

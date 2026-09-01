@@ -67,7 +67,12 @@ def pick_subset(tasks_root: Path) -> list[str]:
 
 
 def stage_tasks(bench: Path, names: list[str], dest: Path) -> None:
+    """Stage exactly `names` under dest — Harbor runs everything in the
+    directory it is pointed at, so stale extras would rerun (and rebill)."""
     dest.mkdir(parents=True, exist_ok=True)
+    for stale in dest.iterdir():
+        if stale.is_dir() and stale.name not in names:
+            shutil.rmtree(stale)
     for n in names:
         tgt = dest / n
         if not tgt.exists():

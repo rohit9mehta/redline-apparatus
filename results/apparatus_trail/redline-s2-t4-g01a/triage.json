@@ -1,0 +1,93 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "Liability cap carve-out leaves Section 8 indemnification uncapped",
+      "tier": 1,
+      "rule_ids": ["R-09", "R-10"],
+      "paragraph_ids": ["p-077"],
+      "planned_action": "Delete the carve-out for 'a party's indemnification obligations under Section 8' from the liability cap exceptions so indemnification (including IP infringement claims) is subject to the same fees-paid-12-months cap; only gross negligence/willful misconduct remains excepted."
+    },
+    {
+      "id": "T-02",
+      "title": "Bespoke warranty representations (a)-(m) import product/staffing-contract terms",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-02"],
+      "paragraph_ids": ["p-053", "p-056", "p-057", "p-062", "p-065", "p-066", "p-068", "p-069"],
+      "planned_action": "Reply on the cmt-186/187 thread declining the out-of-scope reps (FCPA/anti-bribery, litigation-free, personnel background/skill warranties, no-customer-complaints history, defect-free design/material/workmanship) as mismatched to a six-month AI summarization/interview-notes pilot, while confirming the basic due-authority/compliance reps are fine."
+    },
+    {
+      "id": "T-03",
+      "title": "Bespoke security/insurance/tracking/background-check regime (p-172..193)",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-02", "R-07"],
+      "paragraph_ids": ["p-170", "p-173", "p-180", "p-182", "p-193", "p-194"],
+      "planned_action": "Reply on the cmt-479/480 thread with the specific concerns LargeCo asked for (unrestricted production code access, monthly scans, biometric identity verification, guaranteed credit monitoring, expanded third-party-beneficiary rights, cookie/tracking provisions) and hold the prior deletion."
+    },
+    {
+      "id": "T-04",
+      "title": "Exhibit C insurance riders and loss-payee references don't match AgentCo's business or the contracting party",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-02"],
+      "paragraph_ids": ["p-299", "p-305", "p-307", "p-310", "p-311", "p-312"],
+      "planned_action": "Strike the Contractors Pollution Liability requirement (no pollution/e-waste exposure for a SaaS AI vendor), trim the media-company-specific IP/defamation/piracy rider from the Professional Liability requirement, and correct 'Customer Corporation'/'Customercorp Holdings LLC' loss-payee and additional-insured references to the defined party 'Customer.'"
+    },
+    {
+      "id": "T-05",
+      "title": "SLA Recovery Time Objective — hold at 24 hours for a non-critical pilot",
+      "tier": 2,
+      "rule_ids": ["R-07", "R-08"],
+      "paragraph_ids": ["p-273"],
+      "planned_action": "Reply on the cmt-1708/1709 thread declining the 4-hour RTO ask; the pilot's two human-reviewed workflows aren't production-critical infrastructure, so 24 hours remains appropriate."
+    },
+    {
+      "id": "T-06",
+      "title": "SLA uptime commitment at 99.5% is commercially reasonable",
+      "tier": 2,
+      "rule_ids": ["R-07", "R-08"],
+      "paragraph_ids": ["p-259"],
+      "planned_action": "Reply on the cmt-1651 thread confirming acceptance of the 99.5% Uptime Commitment."
+    },
+    {
+      "id": "T-07",
+      "title": "New 'Failure to Correct' termination clause needs an uncured-material-breach trigger",
+      "tier": 2,
+      "rule_ids": ["R-09"],
+      "paragraph_ids": ["p-274"],
+      "planned_action": "Reply on the cmt-1723 thread asking that the termination trigger track Section 7's uncured-material-breach standard rather than any incident."
+    },
+    {
+      "id": "T-08",
+      "title": "Subcontracting requires Customer's written consent rather than notice",
+      "tier": 2,
+      "rule_ids": ["R-14"],
+      "paragraph_ids": ["p-081"],
+      "planned_action": "Replace the written-consent requirement with a notice requirement, consistent with the subprocessor-notice commitment AgentCo can make, and point to the DPA's existing 30-day objection window as the substantive protection."
+    }
+  ],
+  "dispositions": [
+    {"target": "p-001..p-004", "decision": "accept", "rule_ids": [], "reason": "Party-name correction (AgentCo) and DPA incorporation reference are administrative, not substantive."},
+    {"target": "p-007..p-014", "decision": "accept", "rule_ids": ["R-03", "R-05"], "reason": "Reserved placeholders plus the Deliverables/Documentation definitions reflect the agreed split: Customer owns customer-specific deliverables, AgentCo retains platform/model/workflow ownership."},
+    {"target": "p-017..p-027", "decision": "accept", "rule_ids": ["R-14"], "reason": "Definitions renumbering is cosmetic; the license grant (revocable, worldwide, royalty-free, fully paid-up, limited, non-exclusive) and use restrictions were resolved across cmt-57/58 and cmt-63/64/68/69 and don't create AI-output, training, or scope risk."},
+    {"target": "p-031..p-036", "decision": "accept", "rule_ids": ["R-03", "R-05"], "reason": "Content and Customer Data ownership, and the Deliverables assignment mechanics, match the agreed IP split — Customer owns its outputs, AgentCo's processing right is limited to service delivery."},
+    {"target": "p-038..p-045", "decision": "accept", "rule_ids": [], "reason": "Order Form/fee typo fixes and the termination/suspension rights for Authorized User violations are favorable or neutral to AgentCo and already resolved (cmt-117/118/121/122/130/131/133)."},
+    {"target": "p-049..p-050", "decision": "accept", "rule_ids": ["R-10", "R-11"], "reason": "IP indemnity stays tied to the AgentCo service with standard exclusions, and AI-output/hiring-decision claims aren't in scope; resolved across cmt-148/149/162-168."},
+    {"target": "p-053..p-070", "decision": "counter", "rule_ids": ["R-01", "R-02"], "reason": "Reps (a)-(m) import FCPA/anti-bribery, litigation-free, personnel background/skill, and defect-free-workmanship warranties that belong to a different kind of contract (see T-02); base warranty in p-053/p-056 is fine and stays."},
+    {"target": "p-072..p-074", "decision": "accept", "rule_ids": ["R-06", "R-13"], "reason": "AI-specific warranties (drafts-for-human-review standard, no autonomous hiring determination) and disclaimers were resolved in cmt-324/325 and cmt-377/378 and match the required output posture."},
+    {"target": "p-080..p-080", "decision": "accept", "rule_ids": [], "reason": "Standard assignment clause; resolved at cmt-393."},
+    {"target": "p-081..p-081", "decision": "counter", "rule_ids": ["R-14"], "reason": "AgentCo's playbook ceiling for subprocessor engagement is notice, not case-by-case consent (see T-08); prior 're-instate' ask (cmt-395) was never implemented as a tracked edit."},
+    {"target": "p-084..p-088", "decision": "accept", "rule_ids": ["R-04"], "reason": "Confidentiality, Usage Data, and No-Training provisions (with the added Subprocessor-responsibility language at cmt-407/408) match the no-sale/no-training commitment."},
+    {"target": "p-090..p-098", "decision": "accept", "rule_ids": [], "reason": "Reserved placeholders, governing law, notice, no-waiver, entire agreement, and export control are boilerplate; export control was resolved at cmt-425/426/427."},
+    {"target": "p-139..p-153", "decision": "accept", "rule_ids": ["R-12", "R-14"], "reason": "DPA processing instructions, notices, sub-processor engagement, and the once-per-year audit/assessment cadence match the SOC 2/questionnaire/annual-audit posture AgentCo can commit to."},
+    {"target": "p-160..p-160", "decision": "accept", "rule_ids": [], "reason": "Customer's notice/authorization warranty to AgentCo is favorable to AgentCo and was resolved at cmt-456/457."},
+    {"target": "p-168..p-168", "decision": "accept", "rule_ids": ["R-04"], "reason": "No-sale/no-share commitment under U.S. Privacy Laws matches the required no-training/no-sale posture."},
+    {"target": "p-170..p-194", "decision": "reject", "rule_ids": ["R-01", "R-02", "R-07"], "reason": "This bespoke security/insurance/background-check/tracking-cookie regime doesn't fit a six-month, two-workflow AI pilot (see T-03); the deletion stands and we're answering LargeCo's request for specific concerns instead of reinserting it."},
+    {"target": "p-200..p-211", "decision": "accept", "rule_ids": ["R-12"], "reason": "Schedule 1 processing details (duration, sub-processor transfers) are standard DPA disclosures."},
+    {"target": "p-218..p-247", "decision": "accept", "rule_ids": [], "reason": "SCC module/annex cross-references and Exhibit B definitions are boilerplate/renumbering with no substantive change."},
+    {"target": "p-259..p-267", "decision": "accept", "rule_ids": ["R-07", "R-08"], "reason": "99.5% uptime (see T-06) and the corporate-governance-driven service-credit cap (cmt-1686/1687) are within the standard SaaS SLA posture AgentCo can offer; not the 99.99%/100%-credit terms the playbook flags to resist."},
+    {"target": "p-269..p-290", "decision": "counter", "rule_ids": ["R-07", "R-08", "R-09"], "reason": "Recovery Time Objective (see T-05) and the new Failure to Correct termination clause (see T-07) need further definition before AgentCo can commit; the rest of the recovery/update/portal commitments are already reasonable and stay."},
+    {"target": "p-293..p-318", "decision": "accept_with_edit", "rule_ids": ["R-01", "R-02"], "reason": "General Liability, Workers' Comp, Tech E&O, and the insured-contract/deductible terms are standard SaaS insurance asks; the Pollution Liability, media-specific E&O rider, and mismatched loss-payee entity references are corrected under T-04."},
+    {"target": "cmt-1674", "decision": "accept", "rule_ids": [], "reason": "Orphaned 'Accepted' reply within the settled SLA service-credit-table exchange (cmt-1651..cmt-1687); no outstanding term."},
+    {"target": "cmt-1686", "decision": "accept", "rule_ids": ["R-07", "R-08"], "reason": "AgentCo's corporate-governance cap on service credits (no automatic 100% credits) is exactly the limited-credit posture the playbook asks us to hold; already reflected in the p-259..p-267 disposition."}
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "AI Inputs/Outputs stripped of IP characterization, left as Confidential Information only",
+      "tier": 1,
+      "rule_ids": ["R-03"],
+      "paragraph_ids": ["p-031"],
+      "planned_action": "Insert language restoring 'Intellectual Property' alongside 'Confidential Information' for AI Inputs and AI Outputs."
+    },
+    {
+      "id": "T-02",
+      "title": "No contractual restriction limiting the Service to the two approved workflows or barring autonomous employment decisions",
+      "tier": 1,
+      "rule_ids": ["R-02", "R-04"],
+      "paragraph_ids": ["p-031"],
+      "planned_action": "Insert a new sentence in Section 2.3 scoping use to the two approved workflows and barring automated ranking/scoring/rejection/hiring decisions absent separate approval."
+    },
+    {
+      "id": "T-03",
+      "title": "Third-Party AI Technology flow-down obligations deleted entirely",
+      "tier": 1,
+      "rule_ids": ["R-05", "R-01"],
+      "paragraph_ids": ["p-033"],
+      "planned_action": "Insert a conditional flow-down obligation applicable if Provider ever uses third-party AI technology (contractual restrictions, notice, no unauthorized retention/training)."
+    },
+    {
+      "id": "T-04",
+      "title": "Injunctive relief remedy for confidentiality/security breach deleted entirely",
+      "tier": 1,
+      "rule_ids": ["R-08"],
+      "paragraph_ids": ["p-057", "p-058", "p-059"],
+      "planned_action": "Insert a restored injunctive-relief right for breach of confidentiality/data-security obligations, anchored to surviving Confidentiality-section text."
+    },
+    {
+      "id": "T-05",
+      "title": "Indemnification narrowed to third-party IP infringement only, dropping confidentiality/Applicable-Law/gross-negligence triggers and LargeCo Affiliates as indemnified parties",
+      "tier": 1,
+      "rule_ids": ["R-08", "R-03"],
+      "paragraph_ids": ["p-089"],
+      "planned_action": "Insert restored indemnification triggers for breach of confidentiality, breach of Applicable Law relating to privacy/data protection, and gross negligence/willful misconduct; restore LargeCo Affiliates as indemnified parties."
+    },
+    {
+      "id": "T-06",
+      "title": "No-precedent-for-future-agreements clause deleted",
+      "tier": 1,
+      "rule_ids": ["R-12"],
+      "paragraph_ids": ["p-027"],
+      "planned_action": "Insert a restored clause confirming pilot terms do not serve as precedent for a future, larger engagement."
+    },
+    {
+      "id": "T-07",
+      "title": "Replacement Data Processing Agreement (Exhibit C swap) drops core security commitments: encryption, SSO/RBAC, audit logging, incident response, and a bounded breach-notice window",
+      "tier": 1,
+      "rule_ids": ["R-06", "R-06b"],
+      "paragraph_ids": ["p-183"],
+      "planned_action": "Because the entire new DPA and the entire deleted original Exhibit C are tracked-change text with no anchorable surviving span, raise the required restorations via a reply to cmt-336 and a new comment, rather than a direct tracked edit; confirm we can accept SOC 2 evidence delivered annually as the audit substitute."
+    },
+    {
+      "id": "T-08",
+      "title": "AI transparency/information-sharing obligation supporting governance review deleted",
+      "tier": 2,
+      "rule_ids": ["R-02"],
+      "paragraph_ids": ["p-034"],
+      "planned_action": "Insert a restored obligation for Provider to share information about the AI Technology reasonably needed for LargeCo's governance/human-review oversight."
+    },
+    {
+      "id": "T-09",
+      "title": "Access Grant narrowed (worldwide scope dropped) and made conditional on LargeCo's blanket compliance with the Agreement",
+      "tier": 3,
+      "rule_ids": [],
+      "paragraph_ids": ["p-028"],
+      "planned_action": "Insert 'worldwide' back into the license grant; flag the open-ended compliance condition via comment given the Agreement currently has no Term/Termination section defining cure rights."
+    },
+    {
+      "id": "T-10",
+      "title": "180-day stale-invoice protection deleted outright instead of carving out disputed invoices as AgentCo itself proposed",
+      "tier": 2,
+      "rule_ids": ["R-09"],
+      "paragraph_ids": ["p-061"],
+      "planned_action": "Insert a restored 180-day cutoff with an express carve-out for invoices under good-faith dispute."
+    },
+    {
+      "id": "T-11",
+      "title": "Escalation-plan obligation deleted outright instead of scoping to Critical-severity issues as AgentCo itself proposed",
+      "tier": 2,
+      "rule_ids": ["R-10"],
+      "paragraph_ids": ["p-112", "p-116"],
+      "planned_action": "Insert a restored escalation-plan obligation limited to Critical Severity Support requests."
+    },
+    {
+      "id": "T-12",
+      "title": "Recovery Point Objective left unbounded ('as close to real-time as commercially practicable') with no outer cap",
+      "tier": 2,
+      "rule_ids": ["R-06"],
+      "paragraph_ids": ["p-125"],
+      "planned_action": "Insert an outer-bound RPO cap (looser than the original 15 minutes, but not open-ended)."
+    },
+    {
+      "id": "T-13",
+      "title": "Termination-for-SLA-failure right deleted outright instead of conditioning on repeated failures as AgentCo itself proposed",
+      "tier": 2,
+      "rule_ids": ["R-10"],
+      "paragraph_ids": ["p-125", "p-126"],
+      "planned_action": "Insert a restored termination right triggered by a defined pattern of repeated Recovery/Availability failures."
+    },
+    {
+      "id": "T-14",
+      "title": "Additional Insured endorsement requirement deleted from all required insurance policies",
+      "tier": 2,
+      "rule_ids": [],
+      "paragraph_ids": ["p-169", "p-170", "p-176"],
+      "planned_action": "Insert a restored Additional Insured endorsement requirement (scoped, consistent with AgentCo's own narrowing pattern elsewhere in Exhibit B)."
+    },
+    {
+      "id": "T-15",
+      "title": "New restriction bars LargeCo from submitting any data with legal protections beyond generic personal information, which could sweep in ordinary EEO self-identification fields present in standard job applications",
+      "tier": 2,
+      "rule_ids": ["R-04"],
+      "paragraph_ids": ["p-040"],
+      "planned_action": "Insert a carve-out confirming customary recruiting/EEO self-identification data submitted in the ordinary course of the two approved workflows is not swept into the restriction."
+    },
+    {
+      "id": "T-16",
+      "title": "LargeCo Data license narrowed from 'minimum extent necessary' to 'extent necessary'",
+      "tier": 3,
+      "rule_ids": ["R-06"],
+      "paragraph_ids": ["p-052"],
+      "planned_action": "Insert 'minimum' back into the license-scope language."
+    },
+    {
+      "id": "T-17",
+      "title": "New Limitation of Liability section refers to an undefined party 'Catalyst' instead of Provider — leftover boilerplate from another template",
+      "tier": 3,
+      "rule_ids": [],
+      "paragraph_ids": ["p-086", "p-087"],
+      "planned_action": "Flag via standalone comment since the text is inside AgentCo's own insertion and not directly editable; ask AgentCo to correct the drafting error."
+    },
+    {
+      "id": "T-18",
+      "title": "Agreement is missing entire standard sections (Term/Termination, Governing Law, Assignment, Force Majeure, Waiver, Severability, Use of Name) that AgentCo flagged as absent",
+      "tier": 2,
+      "rule_ids": [],
+      "paragraph_ids": ["p-000"],
+      "planned_action": "Reply to cmt-1 acknowledging the gap and confirming LargeCo will follow up with its standard positions; do not fabricate specific fallback terms not present in the playbook."
+    }
+  ],
+  "dispositions": [
+    {"target": "p-001", "decision": "accept", "rule_ids": [], "reason": "Filling corporate blanks and extending the LargeCo defined party to include its Affiliates is administrative and does not shift risk."},
+    {"target": "p-006", "decision": "accept", "rule_ids": [], "reason": "Standard carve-out excluding passive-investor portfolio companies from 'Affiliates'; does not affect LargeCo, a publicly traded company."},
+    {"target": "p-008", "decision": "accept", "rule_ids": ["R-11"], "reason": "Removing PCI DSS from Applicable Law and narrowing to court orders relating to the parties' performance matches the deal's actual scope, which does not involve payment card data."},
+    {"target": "cmt-14", "decision": "accept", "rule_ids": ["R-11"], "reason": "Correct that a private settlement agreement is not itself 'law'; the narrowing is technically sound and low-risk."},
+    {"target": "cmt-19", "decision": "accept", "rule_ids": ["R-11"], "reason": "No PCI data is in scope for this pilot."},
+    {"target": "p-011..p-012", "decision": "accept", "rule_ids": [], "reason": "No custom Deliverables or Derivative Works are created under this SaaS-access pilot; AI Outputs are separately protected under Section 2.3."},
+    {"target": "cmt-21", "decision": "accept", "rule_ids": [], "reason": "Consistent with the deal's SaaS-access structure; outputs remain protected elsewhere."},
+    {"target": "p-013", "decision": "accept", "rule_ids": [], "reason": "Minor conforming edit consequential to the Deliverables cleanup."},
+    {"target": "p-020", "decision": "accept", "rule_ids": [], "reason": "No bespoke development occurs under this pilot, so the narrower Provider Technology definition has no practical effect on LargeCo."},
+    {"target": "p-023..p-025", "decision": "accept", "rule_ids": ["R-01"], "reason": "The new Usage Data definition is limited to interaction/telemetry metadata and expressly excludes LargeCo Data, so it does not touch candidate content or undermine the no-training commitment."},
+    {"target": "cmt-31", "decision": "accept", "rule_ids": [], "reason": "AgentCo followed through on its own suggestion with an appropriately scoped definition."},
+    {"target": "p-035", "decision": "accept", "rule_ids": ["R-01"], "reason": "Usage Data use is limited to service operation/improvement and third-party sharing is barred unless aggregated and anonymized; candidate data is excluded by definition."},
+    {"target": "p-027", "decision": "reject", "rule_ids": ["R-12"], "reason": "Deleting the no-precedent clause would let pilot-scoped, cost-driven concessions bind a future full-scale engagement; we're restoring it."},
+    {"target": "cmt-44", "decision": "reject", "rule_ids": ["R-12"], "reason": "We want future business with AgentCo too, but a successful pilot should be negotiated on its own terms, not inherit pilot-only concessions."},
+    {"target": "p-028", "decision": "counter", "rule_ids": [], "reason": "Restoring worldwide scope matches LargeCo's global footprint; the new compliance condition needs a comment flag given there is no Term/Termination section defining cure rights."},
+    {"target": "p-031", "decision": "counter", "rule_ids": ["R-03", "R-02", "R-04"], "reason": "AI Outputs need IP as well as confidentiality protection, and the Agreement needs an explicit scope/no-autonomous-decision limitation that does not currently exist anywhere in the document."},
+    {"target": "p-033", "decision": "reject", "rule_ids": ["R-05"], "reason": "A same-vendor representation today doesn't protect LargeCo if the AI stack changes during the pilot; we need a conditional flow-down obligation to survive."},
+    {"target": "cmt-64", "decision": "reject", "rule_ids": ["R-05"], "reason": "We're glad it's homegrown today, but the contract needs to address what happens if that changes."},
+    {"target": "p-034", "decision": "counter", "rule_ids": ["R-02"], "reason": "We can live without an unqualified accuracy warranty, but LargeCo's AI-governance review needs Provider's continued cooperation on how the AI Technology operates."},
+    {"target": "p-037..p-038", "decision": "accept", "rule_ids": ["R-11"], "reason": "Conforming cross-reference updates to the renamed Exhibit C and removal of an IP-assignment flow-down that only mattered for Deliverables/Derivative Works, which don't exist in this deal."},
+    {"target": "p-040", "decision": "counter", "rule_ids": ["R-04"], "reason": "The new restriction on submitting specially-protected data is reasonable in principle but is broad enough to sweep in ordinary EEO self-identification fields that appear in standard job applications within the approved workflows."},
+    {"target": "p-042", "decision": "accept", "rule_ids": [], "reason": "Reasonable for AgentCo to review LargeCo policies before agreeing to abide by them; we'll share the applicable policies."},
+    {"target": "cmt-100", "decision": "accept", "rule_ids": [], "reason": "We'll provide the relevant policies for review ahead of signature."},
+    {"target": "p-050", "decision": "accept", "rule_ids": [], "reason": "The Provider Technology sublicense for Deliverables is redundant with the Access Grant since no Deliverables exist; LargeCo's rights in the Service are unaffected."},
+    {"target": "cmt-102", "decision": "accept", "rule_ids": [], "reason": "Correct characterization of a SaaS-access model with no separate Deliverables IP grant needed."},
+    {"target": "p-051", "decision": "accept", "rule_ids": [], "reason": "The restructured Feedback clause is at least as protective of LargeCo as the original."},
+    {"target": "p-052", "decision": "counter", "rule_ids": ["R-06"], "reason": "LargeCo's core data-ownership language survives; we're only restoring 'minimum' to keep the data-minimization principle explicit."},
+    {"target": "cmt-116", "decision": "accept", "rule_ids": [], "reason": "The deleted assignment-back language addressed Derivative Works of Data, which don't arise here; AI Outputs ownership is independently secured in Section 2.3."},
+    {"target": "p-053..p-054", "decision": "accept", "rule_ids": [], "reason": "No Deliverables exist under this engagement; implementation work is service configuration, not custom deliverables."},
+    {"target": "cmt-118", "decision": "accept", "rule_ids": [], "reason": "Consistent with the SaaS-access, no-Deliverables structure of the deal."},
+    {"target": "p-057..p-058", "decision": "accept", "rule_ids": ["R-11"], "reason": "Conditioning export-support effort on a signed Order Form (not the underlying export right itself) and removing the PCI DSS disposal reference are proportionate to scope."},
+    {"target": "p-059", "decision": "reject", "rule_ids": ["R-08"], "reason": "Removing the injunctive-relief remedy leaves LargeCo with damages-only recourse for a confidentiality or data-security breach, which is inadequate given the sensitivity of candidate data; we're restoring it."},
+    {"target": "p-061", "decision": "counter", "rule_ids": ["R-09"], "reason": "AgentCo's own comment proposed a dispute carve-out as an alternative to outright removal; we're implementing that alternative."},
+    {"target": "cmt-128", "decision": "counter", "rule_ids": ["R-09"], "reason": "Adopting AgentCo's own suggested fix rather than losing the protection outright."},
+    {"target": "p-065..p-081", "decision": "accept", "rule_ids": ["R-10"], "reason": "Softened representations and warranties (industry-standard vs. highest-standard language, removal of a no-past-complaints warranty, removal of a physical-defect warranty irrelevant to software) are proportionate for a smaller, lower-cost vendor and don't touch data security, confidentiality, or no-training commitments."},
+    {"target": "p-085..p-087", "decision": "accept", "rule_ids": ["R-08"], "reason": "A standard 12-months'-fees cap for ordinary claims with a 5x-fees carve-out for data-protection and confidentiality breaches matches the stronger-remedy requirement for those categories."},
+    {"target": "p-086..p-087", "decision": "counter", "rule_ids": [], "reason": "Flagging an apparent leftover reference to an undefined party name from another template; this needs correcting for the clause to read consistently."},
+    {"target": "p-089..p-091", "decision": "reject", "rule_ids": ["R-08", "R-03"], "reason": "Narrowing indemnification to IP infringement alone drops coverage for exactly the risk categories (confidentiality, data protection, willful misconduct) that need stronger remedies, and drops LargeCo Affiliates as indemnified parties; we're restoring both."},
+    {"target": "cmt-172", "decision": "reject", "rule_ids": ["R-08"], "reason": "IP-only indemnification leaves LargeCo unprotected for the breach categories the playbook flags as needing the strongest remedies."},
+    {"target": "p-110..p-111", "decision": "accept", "rule_ids": ["R-10"], "reason": "A 99.5% uptime commitment and shorter maintenance-notice windows are realistic for a Series A vendor at this deal size."},
+    {"target": "p-112", "decision": "counter", "rule_ids": ["R-10"], "reason": "Accepting the response/resolution-time split as proposed, but restoring an escalation plan scoped to Critical Severity issues per AgentCo's own suggested alternative."},
+    {"target": "cmt-231", "decision": "accept", "rule_ids": ["R-10"], "reason": "Committing to Response Times without Resolution Times is a reasonable middle ground for this vendor."},
+    {"target": "p-116", "decision": "counter", "rule_ids": ["R-10"], "reason": "Same escalation-plan fix as p-112; implementing AgentCo's own Critical-severity alternative rather than losing escalation planning entirely."},
+    {"target": "cmt-237", "decision": "counter", "rule_ids": ["R-10"], "reason": "Adopting AgentCo's own proposed alternative (Critical Severity only) instead of full removal."},
+    {"target": "p-120..p-121", "decision": "accept", "rule_ids": ["R-10"], "reason": "Automatic Uptime-based Service Credits remain intact; removing automatic credits tied specifically to response/resolution/recovery misses is a reasonable SLA-realism trade for this vendor."},
+    {"target": "cmt-262", "decision": "accept", "rule_ids": ["R-10"], "reason": "Core availability-based credits remain automatic; that's the remedy that matters most."},
+    {"target": "p-122", "decision": "accept", "rule_ids": ["R-10"], "reason": "Standard, reasonable SLA exceptions (internet outages, LargeCo-caused issues, post-Term use) that any vendor would need."},
+    {"target": "cmt-268", "decision": "accept", "rule_ids": [], "reason": "These exceptions reflect LargeCo's own obligations and don't shift unrelated risk."},
+    {"target": "p-124", "decision": "accept", "rule_ids": [], "reason": "Conforming, low-risk wording changes to the Updates provision."},
+    {"target": "p-125", "decision": "counter", "rule_ids": ["R-06"], "reason": "We can accept a relaxed Recovery Point Objective and a lighter disclosure of raw DR test results, but an open-ended RPO with no outer bound is not an acceptable data-loss exposure for candidate records."},
+    {"target": "cmt-283", "decision": "counter", "rule_ids": ["R-06"], "reason": "We're not asking for raw test results back, only a defined outer bound on data loss exposure."},
+    {"target": "p-126", "decision": "counter", "rule_ids": ["R-10"], "reason": "AgentCo's own comment proposed a repeated-failure threshold as an alternative to full removal; we're implementing that alternative rather than losing the termination remedy entirely."},
+    {"target": "cmt-291", "decision": "counter", "rule_ids": ["R-10"], "reason": "Adopting AgentCo's own proposed compromise (termination after a pattern of failures, not a single miss)."},
+    {"target": "p-152..p-154", "decision": "accept", "rule_ids": ["R-10"], "reason": "Reduced CGL/Workers' Comp limits are proportionate to a limited six-month pilot with a smaller vendor."},
+    {"target": "p-156", "decision": "accept", "rule_ids": ["R-10"], "reason": "Reduced Professional Liability limits and tail period, and removal of the media-specific extension, are proportionate to deal size; the underlying risk (IP infringement, confidentiality breach) is independently addressed through indemnification."},
+    {"target": "cmt-302", "decision": "accept", "rule_ids": ["R-10"], "reason": "Proportionate for this vendor and deal size; substantive protection is carried by the indemnification and confidentiality provisions instead."},
+    {"target": "p-165", "decision": "accept", "rule_ids": ["R-07"], "reason": "Pollution Liability coverage is irrelevant to a software vendor with no physical operations touching LargeCo."},
+    {"target": "cmt-314", "decision": "accept", "rule_ids": ["R-07"], "reason": "Not applicable to a SaaS vendor's risk profile."},
+    {"target": "p-167", "decision": "accept", "rule_ids": ["R-10"], "reason": "Reduced Crime insurance limit is proportionate to deal size."},
+    {"target": "p-169..p-170", "decision": "counter", "rule_ids": [], "reason": "Removing Additional Insured status entirely (rather than narrowing it, as AgentCo did elsewhere) would leave LargeCo without direct access to Provider's insurance proceeds for a covered claim; we're restoring a scoped version."},
+    {"target": "p-171..p-172", "decision": "accept", "rule_ids": ["R-10"], "reason": "Scoping the Waiver of Subrogation and Primary/Non-Contributory endorsements to Provider's own negligence or indemnity obligations is a reasonable, standard limitation."},
+    {"target": "p-176", "decision": "counter", "rule_ids": [], "reason": "This deletion is part of the same Additional Insured rollback; restoring alongside p-170."},
+    {"target": "cmt-329", "decision": "accept", "rule_ids": ["R-10"], "reason": "Limiting Provider's obligation to the stated minimum limits is standard and proportionate."},
+    {"target": "p-183..p-330", "decision": "counter", "rule_ids": ["R-06", "R-06b", "R-07", "R-11"], "reason": "The wholesale swap from LargeCo's prescriptive security exhibit to AgentCo's generic controller-processor DPA is acceptable for the bespoke controls the playbook already says to concede (source-code review, monthly scans, equipment approval, facility access, background-check hand-over, PCI DSS), but drops core commitments the playbook requires (encryption, SSO/role-based access, audit logging, incident response, a bounded breach-notice window); raising these via comment since the region has no anchorable surviving text."},
+    {"target": "cmt-336", "decision": "counter", "rule_ids": ["R-06", "R-07"], "reason": "We can rely on SOC 2 in lieu of a bespoke audit right, but it needs to be a standing annual delivery obligation and needs to be paired with explicit encryption/access-control/audit-log/incident-response/breach-notice commitments that the current DPA doesn't state."},
+    {"target": "cmt-562", "decision": "accept", "rule_ids": [], "reason": "General pointer comment with no independent substance beyond the tracked edits already addressed elsewhere."},
+    {"target": "cmt-568", "decision": "accept", "rule_ids": ["R-01"], "reason": "Usage Data collection for AgentCo's internal business use is already addressed by the negotiated Section 2.3 language; confirming no elevated site access is implied."},
+    {"target": "cmt-577", "decision": "accept", "rule_ids": ["R-11"], "reason": "No PCI data is in scope for this pilot."},
+    {"target": "cmt-582", "decision": "accept", "rule_ids": ["R-07"], "reason": "The playbook already treats background-check evidence hand-over as a control to reserve for future, more privileged integrations; a hire-time warranty is sufficient for this pilot."},
+    {"target": "cmt-1", "decision": "counter", "rule_ids": [], "reason": "Acknowledging the missing Term/Termination, Governing Law, Assignment, Force Majeure, Waiver, Severability, and Use of Name sections; LargeCo will follow up with its positions rather than guessing at terms not in the playbook."}
+  ]
+}

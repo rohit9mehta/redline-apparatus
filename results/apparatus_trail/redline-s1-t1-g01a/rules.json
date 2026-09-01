@@ -1,0 +1,157 @@
+{
+  "rules": [
+    {
+      "id": "R-01",
+      "topic": "Liability cap (baseline)",
+      "severity": "walk_away",
+      "position": "Total liability under the agreement must be capped at fees paid in the trailing twelve months, with a carve-out only for gross negligence/willful misconduct, indemnification, and confidentiality/data-security/DPA breaches.",
+      "fallback": "Higher, separate cap (e.g., 2x fees) for confidentiality, candidate-data security, and DPA breaches, per playbook allowance for a 'targeted higher cap' on those categories.",
+      "quote": "AgentCo should protect the  baseline cap at fees paid in the prior twelve months,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-02",
+      "topic": "Resist unlimited liability for AI/hiring outcomes",
+      "severity": "walk_away",
+      "position": "AgentCo cannot accept unlimited/uncapped liability tied to AI output issues, LargeCo's own hiring decisions, unreviewed use of outputs, LargeCo's job criteria, candidate notices, or employment decisions.",
+      "fallback": null,
+      "quote": "should resist unlimited liability for AI output issues, customer hiring decisions, unreviewed use of outputs,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-03",
+      "topic": "IP indemnity scope/exclusions",
+      "severity": "walk_away",
+      "position": "IP indemnification must stay tied to the AgentCo service itself and include standard exclusions (unmodified service, no combination with unapproved third-party materials, no continued use after notice, use consistent with the agreement).",
+      "fallback": "Use AgentCo's standard exclusion set (A)-(E) as precedent.",
+      "quote": "tied to the AgentCo service and standard exclusions.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-04",
+      "topic": "IP indemnity exclusions (precedent language)",
+      "severity": "strong",
+      "position": "Standard IP indemnity carve-outs excluding unmodified/uncombined/properly-used service components, consistent with AgentCo's own template.",
+      "fallback": null,
+      "quote": "(A) not developed by AgentCo, including Customer Data",
+      "source": "AgentCo_-_Platform_Agreement.extracted.md"
+    },
+    {
+      "id": "R-05",
+      "topic": "Platform/IP ownership",
+      "severity": "walk_away",
+      "position": "AgentCo must preserve ownership of its own platform, models, reusable workflows, prompt templates, evaluation methods, and non-customer-specific know-how, even while LargeCo owns its own candidate materials, prompts, configurations, and customer-specific outputs.",
+      "fallback": null,
+      "quote": "train on, or use candidate data outside TalentFlow. But AgentCo should preserve ownership of its",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-05b",
+      "topic": "Platform/IP ownership (continued)",
+      "severity": "walk_away",
+      "position": "Reusable workflows, prompt templates, evaluation methods, and non-customer-specific know-how remain AgentCo's, not assigned to the customer.",
+      "fallback": null,
+      "quote": "platform, models, reusable workﬂows, prompt templates, evaluation methods, and",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-06",
+      "topic": "No-training commitment",
+      "severity": "walk_away",
+      "position": "AgentCo will not train any AI model on customer content/data, without carve-outs or customer-granted exceptions that create ambiguity.",
+      "fallback": null,
+      "quote": "AgentCo will not, and will not permit any Subprocessor to, train any AI model using Customer's Content or Customer Data.",
+      "source": "AgentCo_-_Platform_Agreement.extracted.md"
+    },
+    {
+      "id": "R-07",
+      "topic": "Outputs are drafts for human review, not guaranteed",
+      "severity": "walk_away",
+      "position": "TalentFlow outputs must be treated as drafts for human review, not warranted as accurate, reliable, legally compliant, unbiased, or complete hiring decisions.",
+      "fallback": null,
+      "quote": "non-customer-speciﬁc know-how. TalentFlow outputs should be treated as drafts for human review, not",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-07b",
+      "topic": "Outputs are drafts for human review, not guaranteed (continued)",
+      "severity": "walk_away",
+      "position": "No warranty that outputs are guaranteed legal, compliant, unbiased, or complete hiring decisions.",
+      "fallback": null,
+      "quote": "guaranteed legal, compliant, unbiased, or complete hiring decisions.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-08",
+      "topic": "Scope creep - risks outside the initial use case",
+      "severity": "strong",
+      "position": "Narrow out template terms that assume risks outside the actual TalentFlow pilot use case - specifically payment card data, consumer tracking technology, and direct production-system access.",
+      "fallback": null,
+      "quote": "such as payment card data, consumer tracking technology, direct production-system access, and",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-09",
+      "topic": "Scope - keep focused on pilot use case",
+      "severity": "strong",
+      "position": "Keep the agreement focused on the actual TalentFlow pilot (candidate-material summaries and interview-note drafting for human review); narrow terms that treat TalentFlow as a broader HR system, screening tool, or decision-making engine.",
+      "fallback": null,
+      "quote": "AgentCo should keep the agreement  focused on the actual TalentFlow pilot:",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-09b",
+      "topic": "Scope - pilot workflows",
+      "severity": "strong",
+      "position": "Pilot covers candidate-material summaries and interview-note drafting for human review only.",
+      "fallback": null,
+      "quote": "candidate-material summaries and interview-note drafting for human review.",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-10",
+      "topic": "Security/SLA/audit - resist onerous ops obligations",
+      "severity": "strong",
+      "position": "Resist unrestricted code access, monthly security scans, uncontrolled testing, 99.99% uptime, ultra-short (thirty-minute) resolution obligations, and automatic 100% service credits.",
+      "fallback": "Offer a standard SaaS SLA with severity-based support and limited service credits.",
+      "quote": "unrestricted code access, monthly scans, uncontrolled testing, 99.99% uptime, thirty-minute resolution",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-10b",
+      "topic": "Standard SaaS SLA fallback",
+      "severity": "strong",
+      "position": "Offer a standard SaaS SLA with severity-based support and limited service credits instead of automatic full credits.",
+      "fallback": "Standard SaaS SLA with severity-based support and limited service credits.",
+      "quote": "obligations, and automatic 100% service credits. Offer a standard SaaS SLA with severity-based support",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-11",
+      "topic": "Security/audit - acceptable alternative",
+      "severity": "preference",
+      "position": "AgentCo can accept SOC 2 or equivalent materials, questionnaires, subprocessor details, data-flow descriptions, and a reasonable annual audit process in lieu of unrestricted/rolling audit and testing rights.",
+      "fallback": "Reasonable annual audit process; SOC2/equivalent documentation.",
+      "quote": "AgentCo can accept a DPA, conﬁdentiality  protections, no-training commitments,",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-12",
+      "topic": "Indirect/consequential damages waiver",
+      "severity": "strong",
+      "position": "Neither party is liable for consequential, incidental, indirect, exemplary, special, enhanced, or punitive damages, or loss of data/revenue/profits.",
+      "fallback": null,
+      "quote": "any consequential, incidental, indirect, exemplary, special, enhanced, or punitive damages",
+      "source": "AgentCo_-_Platform_Agreement.extracted.md"
+    },
+    {
+      "id": "R-13",
+      "topic": "Scale across enterprise customers - avoid one-off obligations",
+      "severity": "preference",
+      "position": "AgentCo wants a contract position it can scale across enterprise customers, and should avoid bespoke, one-off obligations that would make TalentFlow harder to sell, support, or operate for other large customers.",
+      "fallback": null,
+      "quote": "conﬁdentiality, security, and human review seriously, but avoid one-off obligations that would make",
+      "source": "Project_Veritas_Scenario_1_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    }
+  ]
+}

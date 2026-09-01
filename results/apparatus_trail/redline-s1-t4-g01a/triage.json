@@ -1,0 +1,118 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "Restore injunctive relief for Provider breaches of AI restrictions, Data, and Exhibit C",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-02", "R-09", "R-13"],
+      "paragraph_ids": ["p-056"],
+      "planned_action": "AgentCo (rev-91) deleted our Round-2 sentence tying irreparable-harm/injunctive relief specifically to Provider's breach of the AI restrictions (Section 3.3), Exhibit C, and misuse of AI Inputs/Outputs/Data/Personal Information, calling it a template 'expansion' (cmt-87). The MSA baseline itself already ties injunctive relief to Section 4/Exhibit C breaches, and R-09 requires stronger remedies for confidentiality/data-security/no-training/misuse-of-candidate-data breaches specifically because money damages can't undo unauthorized AI training or a candidate-data breach. Reinsert equivalent language via a fresh tracked insert anchored to stable text, and reply to cmt-87 explaining the practical consequence."
+    },
+    {
+      "id": "T-02",
+      "title": "Restore indemnification categories (c)(d)(e) now that indemnification is folded into the 3x super-cap",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-02", "R-09", "R-11"],
+      "paragraph_ids": ["p-082", "p-087"],
+      "planned_action": "AgentCo deleted (rev-149) LargeCo's reinserted indemnification categories for Provider's breach of Applicable Law, breach of confidentiality, and gross negligence/willful misconduct (cmt-146: core vendor accountability protections), but separately offered (cmt-133) to accept the expanded indemnification scope if indemnification counts toward the 3x super-cap in Section 16.3.1 -- which AgentCo then implemented via rev-168 (adding 'indemnification obligations' to the p-087 super-cap list). Accept rev-168 (no reversal) and, on that basis, reinsert the (c)(d)(e) categories AgentCo's own comment conditioned on that trade. Reply on cmt-133 confirming the pairing."
+    },
+    {
+      "id": "T-03",
+      "title": "Hold insurance limits (CGL, Workers' Comp/Employers' Liability) and Professional Liability claims-made tail at template levels",
+      "tier": 2,
+      "rule_ids": ["R-08"],
+      "paragraph_ids": ["p-160", "p-162", "p-164"],
+      "planned_action": "AgentCo's Round-3 edits (rev-232/234, rev-242/244, rev-250/251/253) overwrite LargeCo's Round-2 reinsertion of the template $5,000,000 CGL and Workers' Comp/Employers' Liability limits with $2,000,000, and shorten the Professional Liability claims-made tail from three years to one year. LargeCo's own Round-2 comment (cmt-230) already stated these limits can't be reduced below template without confirmation from LargeCo risk/procurement -- authority we don't have to grant here. Reassert the template figures with fresh tracked edits and reply on cmt-231 accepting the $5M Cyber Liability figure (already aligned) while holding the rest."
+    },
+    {
+      "id": "T-04",
+      "title": "Restore a baseline defect-free-efforts warranty",
+      "tier": 3,
+      "rule_ids": ["R-06"],
+      "paragraph_ids": ["p-077"],
+      "planned_action": "AgentCo (rev-113) deleted LargeCo's already-softened, effort-based warranty that Services will be free from design/material/workmanship defects (cmt-111: 'expanding obligations... (i) should be sufficient'). Warranty (i) covers personnel skill/quality, not defects in the service itself -- different risk categories. Reinsert the effort-based version and reply explaining the distinction."
+    },
+    {
+      "id": "T-05",
+      "title": "Close out SLA severity/resolution-time compromise",
+      "tier": 3,
+      "rule_ids": ["R-06"],
+      "paragraph_ids": ["p-108"],
+      "planned_action": "AgentCo (cmt-184) offered 24-hour resolution for Critical and 48-hour for High severity issues as a compromise on incident responsiveness during the pilot. This satisfies R-06's incident-response expectation for a 6-month pilot; accept via reply since the specific timing table isn't reachable through this tool's paragraph anchors."
+    }
+  ],
+  "dispositions": [
+    {
+      "target": "p-006..p-024",
+      "decision": "accept",
+      "rule_ids": ["R-02"],
+      "reason": "Definitions fights (Agents, Applicable Law, Confidential Information, System) from Rounds 1-3 are resolved: mutual/LargeCo-specific carve-outs LargeCo needed (candidate data as LargeCo Confidential Information, Provider-specific System access) are in and AgentCo accepted them (cmt-15, cmt-20). Two small residual items get a closing reply rather than a fight: keeping the Agents definition Provider-focused (cmt-4) and accepting AgentCo's removal of 'or settlement agreement' from Applicable Law (cmt-10/rev-9), which is a fair point since a settlement agreement between third parties isn't binding law on Provider."
+    },
+    {
+      "target": "p-025..p-036",
+      "decision": "accept",
+      "rule_ids": ["R-01", "R-01b", "R-03", "R-03b", "R-11", "R-12", "R-13"],
+      "reason": "Core AI governance protections are intact and accepted by AgentCo: no-training warranty (p-031) untouched, decision-support/no-autonomous-decisions restriction (p-033, rev-49) accepted per cmt-48, AI Inputs/Outputs ownership (p-030) untouched, Agent and third-party AI flow-down accountability (p-032, p-035) untouched. These are the walk-away items and none were diluted in the latest round."
+    },
+    {
+      "target": "p-037..p-051",
+      "decision": "accept",
+      "rule_ids": ["R-02", "R-13"],
+      "reason": "LargeCo Data ownership/license (p-049), Deliverables ownership (p-051), and the negotiated personnel-removal and cooperation-scope compromises (p-042, p-043, cmt-59/60, cmt-64/65) were accepted by AgentCo and are consistent with keeping candidate data and outputs LargeCo-controlled."
+    },
+    {
+      "target": "p-052..p-061",
+      "decision": "accept_with_edit",
+      "rule_ids": ["R-01", "R-02", "R-09"],
+      "reason": "Confidentiality carve-outs for compelled disclosure (p-053) and Disposal scoping (p-055) are resolved and accepted (cmt-74). The Injunction clause (p-056) needs a restorative edit per T-01. Fee dispute-withholding mechanism (p-058, rev-95) and AgentCo's good-faith-dispute carve-out on late payment (rev-97/cmt-96) are a fair pairing -- accept the carve-out."
+    },
+    {
+      "target": "p-062..p-080",
+      "decision": "accept_with_edit",
+      "rule_ids": ["R-06"],
+      "reason": "IP non-infringement representation was retained per AgentCo's own acceptance (cmt-106). The cure-period/termination-for-affected-Service language (p-080) was accepted (cmt-120). Only the defect-free warranty (p-077, T-04) needs restoration."
+    },
+    {
+      "target": "p-081..p-087",
+      "decision": "accept_with_edit",
+      "rule_ids": ["R-01", "R-02", "R-09", "R-11"],
+      "reason": "Indemnification procedure mutuality (p-084) and the general liability cap mutuality (p-086) are reasonable, already-settled compromises. Indemnification substantive scope (p-082) and the confidentiality/infosec/privacy super-cap (p-087) need the restoration and cap pairing described in T-02."
+    },
+    {
+      "target": "p-095..p-122",
+      "decision": "accept",
+      "rule_ids": ["R-06", "R-08"],
+      "reason": "SLA maintenance-window, recovery objectives, service-credit calculation methodology, and breach-cure mechanics (p-106, p-107, p-113, p-114, p-116, p-121, p-122) were negotiated across Rounds 2-3 without further AgentCo pushback and reflect reasonable pilot-appropriate terms consistent with R-08. The Critical/High resolution-time compromise (p-108, T-05) is closed via reply since the timing figures sit in a Word table this tool can't anchor into."
+    },
+    {
+      "target": "p-142..p-153",
+      "decision": "accept",
+      "rule_ids": ["R-08"],
+      "reason": "These are empty, whitespace-only tracked insertions left over from AgentCo's baseline redraft of the Exhibit A support-table area -- no substantive text change to evaluate."
+    },
+    {
+      "target": "cmt-183",
+      "decision": "accept",
+      "rule_ids": ["R-06"],
+      "reason": "Our own comment flagging that Critical/High issues need faster engagement during the pilot; superseded by the resolution reached and confirmed in our reply to cmt-184."
+    },
+    {
+      "target": "cmt-197",
+      "decision": "accept",
+      "rule_ids": ["R-06"],
+      "reason": "AgentCo's explanation for why SLA timelines should reflect a Series A company's scale rather than a mission-critical vendor's; addressed by accepting the 24hr/48hr resolution-time compromise via the reply to cmt-184."
+    },
+    {
+      "target": "p-156..p-187",
+      "decision": "accept_with_edit",
+      "rule_ids": ["R-08"],
+      "reason": "Cyber Liability and Technological E&O limits, and the Commercial Crime limit (p-174), are unopposed at the template's $5,000,000 level. CGL, Workers' Comp/Employers' Liability limits, and the Professional Liability claims-made tail need the reassertion in T-03; the now-inapplicable insurance carve-out AgentCo removed (p-173) is accepted since it isn't relevant to this SaaS pilot."
+    },
+    {
+      "target": "p-190..p-240",
+      "decision": "accept",
+      "rule_ids": ["R-05", "R-06", "R-07", "R-09"],
+      "reason": "Exhibit C reflects the deal-appropriate scope-down the playbook calls for (R-07): audit rights narrowed to SOC 2 plus subprocessor/data-flow disclosure and post-breach control detail (p-210) rather than source-code review or facility access; background checks scoped to privileged-access personnel only (p-237); regulator-assistance premises access dropped (p-221) as not applicable without direct system access. Breach-notification timing (24hr/48hr, p-227), breach-resolution standard (p-229), breach-investigation and notification responsibility (p-230), and credit monitoring for Provider-caused incidents (p-232, cmt-298/299) were negotiated in Rounds 2-3 and accepted or left unopposed, consistent with R-05/R-06/R-09. No further action needed."
+    }
+  ]
+}

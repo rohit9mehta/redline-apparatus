@@ -1,0 +1,61 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "Service description and use-case scope don't match the actual TalentFlow pilot",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-03"],
+      "paragraph_ids": ["p-008", "p-023"],
+      "planned_action": "Correct the 'Basic Service' definition (currently describes general-legal-research functionality) and add a scope clause in Section 3.1 tying use to the two approved order-form workflows, with expansion requiring separate written agreement."
+    },
+    {
+      "id": "T-02",
+      "title": "No restriction against autonomous employment decisions / no human-review requirement",
+      "tier": 1,
+      "rule_ids": ["R-02"],
+      "paragraph_ids": ["p-023"],
+      "planned_action": "Add language in Section 3.1 confirming Service outputs are decision-support only and that autonomous hiring/comp/promotion/termination decisions require human review."
+    },
+    {
+      "id": "T-03",
+      "title": "No Training clause doesn't bar sale/sharing of candidate data and only 'permits' (not contractually binds) subprocessors",
+      "tier": 1,
+      "rule_ids": ["R-04", "R-05"],
+      "paragraph_ids": ["p-062"],
+      "planned_action": "Strengthen Section 11.7 to prohibit selling, sharing, or using Customer Content/Data outside the Service, and to contractually bind subprocessors rather than merely 'not permit' them."
+    },
+    {
+      "id": "T-04",
+      "title": "Liability cap has no carve-out for confidentiality, data-security, or no-training breaches",
+      "tier": 1,
+      "rule_ids": ["R-06"],
+      "paragraph_ids": ["p-053"],
+      "planned_action": "Add carve-outs to Section 10.2's liability cap for breach of Section 11.5 (Confidentiality), Section 11.7 (No Training), and Personal Data Breaches."
+    },
+    {
+      "id": "T-05",
+      "title": "Confidentiality clause has no standard-of-care requirement",
+      "tier": 2,
+      "rule_ids": ["R-07"],
+      "paragraph_ids": ["p-060"],
+      "planned_action": "Insert a standard-of-care sentence into Section 11.5 (at least the same care as the receiving party's own similarly sensitive information, never less than reasonable care)."
+    },
+    {
+      "id": "T-06",
+      "title": "Personal Data Breach notice standard is an unbounded 'without undue delay' with no outer limit",
+      "tier": 2,
+      "rule_ids": ["R-10", "R-08"],
+      "paragraph_ids": ["p-123"],
+      "planned_action": "Add a concrete outer bound (24 hours) to the DPA's breach-notification timing in Section 3.6."
+    },
+    {
+      "id": "T-07",
+      "title": "Vendor can unilaterally downgrade Customer's audit right to a self-selected summary",
+      "tier": 2,
+      "rule_ids": ["R-11", "R-08"],
+      "paragraph_ids": ["p-125"],
+      "planned_action": "Condition the audit-to-summary substitution in DPA Section 3.7 on Customer's agreement rather than leaving it to AgentCo's unilateral election."
+    }
+  ],
+  "dispositions": []
+}

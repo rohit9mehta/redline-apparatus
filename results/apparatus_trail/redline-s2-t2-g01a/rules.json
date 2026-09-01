@@ -1,0 +1,139 @@
+{
+  "rules": [
+    {
+      "id": "R-01",
+      "topic": "No-training / candidate data use limits",
+      "severity": "walk_away",
+      "position": "AgentCo will not sell, share, train models on, or otherwise use candidate data outside TalentFlow.",
+      "fallback": null,
+      "quote": "AgentCo should not sell, share, \n train on, or use candidate data outside TalentFlow.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-02",
+      "topic": "AgentCo platform/IP ownership",
+      "severity": "walk_away",
+      "position": "AgentCo must retain ownership of its platform, models, reusable workflows, prompt templates, evaluation methods, and non-customer-specific know-how; only customer-specific outputs are Customer's.",
+      "fallback": null,
+      "quote": "AgentCo should preserve ownership of its \n platform, models, reusable workﬂows, prompt templates, evaluation methods, and \n non-customer-speciﬁc know-how.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-03",
+      "topic": "Customer ownership of its own materials and outputs",
+      "severity": "preference",
+      "position": "AgentCo can agree LargeCo owns its candidate materials, job requirements, prompts, configurations, and customer-specific outputs.",
+      "fallback": null,
+      "quote": "AgentCo should  agree that LargeCo owns its \n candidate materials, job requirements, prompts, conﬁgurations, and customer-speciﬁc outputs.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-04",
+      "topic": "Outputs are drafts, not guaranteed/complete decisions",
+      "severity": "walk_away",
+      "position": "TalentFlow outputs must be treated as drafts for human review, not guaranteed legal, compliant, unbiased, or complete hiring decisions -- AgentCo cannot warrant output accuracy/completeness.",
+      "fallback": null,
+      "quote": "TalentFlow outputs should be treated as drafts for human review, not \n guaranteed legal, compliant, unbiased, or complete hiring decisions.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-05",
+      "topic": "Scope limited to the pilot use case",
+      "severity": "strong",
+      "position": "Keep the agreement focused on candidate-material summaries and interview-note drafting for human review; narrow any terms treating TalentFlow as a broader HR system of record, screening tool, background-check platform, payroll/benefits system, or decision engine. Expansion into ATS integrations, scoring, assessments, background checks, payroll, benefits, immigration, accommodations, or employee-relations data requires separate written approval, security review, and a scoped order form.",
+      "fallback": "A scoped order form / written approval process for expanded use cases",
+      "quote": "It should narrow terms \n that treat TalentFlow as a broader HR system of record, automated screening tool, background-check \n platform, payroll/beneﬁts system, or decision-making engine. Any expansion into ATS integrations, \n candidate scoring, assessments, background checks, payroll, beneﬁts, immigration, accommodations, or \n employee-relations data should require a separate written approval, security review, and scoped order \n form.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-06",
+      "topic": "No autonomous employment decisions",
+      "severity": "walk_away",
+      "position": "TalentFlow will not make autonomous hire, reject, compensation, promotion, termination, ranking, filtering, or scoring decisions -- everything is human-reviewed.",
+      "fallback": null,
+      "quote": "TalentFlow may support human-reviewed hiring workﬂows, but it \n will not make autonomous hire, reject, compensation, promotion, termination, ranking, ﬁltering, or \n scoring decisions.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-07",
+      "topic": "Security, SLA and audit realism",
+      "severity": "strong",
+      "position": "AgentCo can offer SOC 2 or equivalent materials, questionnaires, subprocessor details, data-flow descriptions, and a reasonable annual audit process, plus a standard SaaS SLA with severity-based support and limited service credits. AgentCo must resist unrestricted code access, monthly scans, uncontrolled testing, 99.99% uptime, thirty-minute resolution obligations, and automatic 100% service credits.",
+      "fallback": "Standard SaaS SLA with severity-based support and limited service credits",
+      "quote": "It should resist \n unrestricted code access, monthly scans, uncontrolled testing, 99.99% uptime, thirty-minute resolution \n obligations, and automatic 100% service credits. Offer a standard SaaS SLA with severity-based support \n and limited service credits.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-08",
+      "topic": "Liability cap baseline",
+      "severity": "walk_away",
+      "position": "Protect the baseline liability cap at fees paid in the prior twelve months, while considering a targeted higher cap for confidentiality, candidate-data security, and DPA breaches.",
+      "fallback": "A targeted higher cap (not uncapped) for confidentiality, candidate-data security, and DPA breaches",
+      "quote": "AgentCo should protect the  baseline cap at fees paid in the prior twelve months, \n while considering a targeted higher cap for conﬁdentiality, candidate-data security, and DPA breaches.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-09",
+      "topic": "Resist unlimited liability for AI/output/employment-decision issues",
+      "severity": "walk_away",
+      "position": "AgentCo should resist unlimited liability for AI output issues, Customer's hiring decisions, unreviewed use of outputs, LargeCo's job criteria, candidate notices, workflows, or employment decisions.",
+      "fallback": null,
+      "quote": "It should resist unlimited liability for AI output issues, customer hiring decisions, unreviewed use of outputs, \n LargeCo’s job criteria, candidate notices, workﬂows, or employment decisions.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-10",
+      "topic": "IP indemnity scope",
+      "severity": "strong",
+      "position": "IP indemnity should stay tied to the AgentCo service and standard exclusions -- not expanded to cover general legal compliance, warranty breaches, or Customer's use of outputs.",
+      "fallback": null,
+      "quote": "IP indemnity should stay \n tied to the AgentCo service and standard exclusions.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-11",
+      "topic": "Acceptable baseline commitments",
+      "severity": "preference",
+      "position": "AgentCo can accept a DPA, confidentiality protections, no-training commitments, limits on use of candidate data, commercially reasonable security obligations, subprocessor notice, data export/deletion, audit logs, admin controls, and documentation describing intended use and human-review expectations.",
+      "fallback": null,
+      "quote": "AgentCo can accept a DPA, conﬁdentiality  protections, no-training commitments, \n limits on use of candidate data, commercially reasonable security obligations, subprocessor notice, data \n export/deletion, audit logs, admin controls, and documentation describing intended use and \n human-review expectations.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-12",
+      "topic": "Scalable contract position / avoid one-off obligations",
+      "severity": "strong",
+      "position": "AgentCo wants a contract position it can scale across enterprise customers -- avoid bespoke, one-off obligations that would make TalentFlow harder to sell, support, or operate for other large customers.",
+      "fallback": null,
+      "quote": "Core objective:  AgentCo wants to win the LargeCo TalentFlow pilot while adopting a contract position it \n can scale across enterprise customers.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-12b",
+      "topic": "Avoid obligations that don't generalize",
+      "severity": "strong",
+      "position": "AgentCo should avoid one-off obligations that would make TalentFlow harder to sell, support, or operate for other large customers.",
+      "fallback": null,
+      "quote": "but avoid one-off obligations that would make \n TalentFlow harder to sell, support, or operate for other large customers.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-13",
+      "topic": "LargeCo as reference customer",
+      "severity": "preference",
+      "position": "LargeCo is a significant potential reference customer for AgentCo, which is a factor in favor of preserving AgentCo's ability to reference the relationship (subject to the deal otherwise being properly scoped).",
+      "fallback": null,
+      "quote": "LargeCo would be a \n signiﬁcant reference customer, but AgentCo wants the deal \n scoped to the actual TalentFlow deployment.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-14",
+      "topic": "Resist risks/controls outside the initial use case",
+      "severity": "strong",
+      "position": "AgentCo will support a serious security, privacy, and AI governance review, but is concerned that LargeCo's template assumes risks outside the initial TalentFlow use case, such as payment card data, consumer tracking technology, direct production-system access, and bespoke operational controls.",
+      "fallback": null,
+      "quote": "It is \n prepared to support a serious security, privacy, and AI \n governance review, but is concerned that LargeCo’s template assumes risks outside the initial use case, \n such as payment card data, consumer tracking technology, direct production-system access, and \n bespoke operational controls.",
+      "source": "Scenario_2_AgentCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    }
+  ]
+}

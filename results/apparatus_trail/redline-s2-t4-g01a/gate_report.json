@@ -1,0 +1,50 @@
+{
+ "overall": "PASS",
+ "checks": [
+  {
+   "id": "A1-apparatus",
+   "status": "PASS",
+   "detail": "14 rule card(s), 8 issue(s), 23 disposition(s)"
+  },
+  {
+   "id": "C1-coverage",
+   "status": "PASS",
+   "detail": "every tier-1/2 issue has a visible move"
+  },
+  {
+   "id": "C2-dispositions",
+   "status": "PASS",
+   "detail": "all 1477 foreign revision(s) and 48 thread(s) covered by 23 disposition(s)"
+  },
+  {
+   "id": "C3-follow-through",
+   "status": "PASS",
+   "detail": "every reject/counter has a visible move"
+  },
+  {
+   "id": "G1-citations",
+   "status": "PASS",
+   "detail": "all 14 rule quote(s) verbatim in grounding"
+  },
+  {
+   "id": "P1-phrases",
+   "status": "PASS",
+   "detail": "18 comment(s) clean of forbidden phrases"
+  },
+  {
+   "id": "P2-voice",
+   "status": "PASS",
+   "detail": "no voice-lint warnings"
+  },
+  {
+   "id": "S1-surgicalness",
+   "status": "PASS",
+   "detail": "12 edit event(s): block share 33% (attorneys ~51%, frontier models 62-81%), mean event size 147 chars (attorneys ~101, models 318-518)"
+  },
+  {
+   "id": "V1-validity",
+   "status": "PASS",
+   "detail": "21 tracked change(s), 18 comment(s) by 'Reviewing Counsel (AgentCo)'"
+  }
+ ]
+}

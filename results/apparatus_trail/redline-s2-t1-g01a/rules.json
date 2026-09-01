@@ -1,0 +1,130 @@
+{
+  "rules": [
+    {
+      "id": "R-01",
+      "topic": "Scope limited to two approved pilot workflows",
+      "severity": "walk_away",
+      "position": "TalentFlow use under this Agreement must stay tied to the two approved pilot workflows (candidate-material summaries and interview-note drafting); nothing broader is authorized without a separate approval process.",
+      "fallback": null,
+      "quote": "The pilot should stay tied to two approved use cases: candidate-material summaries and interview-note drafting.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-02",
+      "topic": "No autonomous employment decisions",
+      "severity": "walk_away",
+      "position": "TalentFlow must remain a decision-support tool for human reviewers; it cannot automatically rank, score, advance, reject, recommend, or make employment decisions without separate approval.",
+      "fallback": null,
+      "quote": "TalentFlow must remain a decision-support tool: it should not automatically rank, score, advance, reject, recommend, or make employment decisions without separate approval.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-03",
+      "topic": "Expansion beyond pilot scope requires separate approval",
+      "severity": "strong",
+      "position": "Any expansion into ATS/HRIS integrations, automated screening, candidate scoring, assessments, background checks, payroll, benefits, or other sensitive HR data requires separate written approval, a security review, and a scoped order form.",
+      "fallback": "expansion permitted upon separate written approval, security review, and a scoped order form",
+      "quote": "Any expansion into ATS/HRIS integrations, automated screening, candidate scoring, assessments, background checks, payroll, beneﬁts, or sensitive HR data should require separate written approval, security review, and a scoped order form.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-04",
+      "topic": "No training on, sale, or sharing of candidate data",
+      "severity": "walk_away",
+      "position": "AgentCo cannot train on, sell, share, or use candidate data outside the TalentFlow service.",
+      "fallback": null,
+      "quote": "LargeCo cannot approve terms that allow AgentCo to train on, sell, share, or use candidate data outside the TalentFlow service.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-05",
+      "topic": "No-training obligation must flow down to subprocessors by contract",
+      "severity": "walk_away",
+      "position": "The prohibition on using LargeCo data to train or enhance AI/ML models must be a contractual obligation imposed on Provider's subprocessors/third parties, not merely something Provider does not \"permit.\"",
+      "fallback": null,
+      "quote": "shall and shall contractually obligate third parties to, not use or process LargeCo data to train, build, or enhance artificial intelligence or machine learning for any reason and such use case is expressly prohibited by this Agreement.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-06",
+      "topic": "Liability cap carve-outs for confidentiality/data-security/no-training breaches",
+      "severity": "strong",
+      "position": "A standard liability cap is acceptable for ordinary service issues, but confidentiality, candidate-data security, privacy, and no-training breaches (and misuse of candidate data) need stronger remedies than the standard cap.",
+      "fallback": "standard fees-paid liability cap acceptable for ordinary service issues, provided confidentiality/data-security/no-training breaches are carved out",
+      "quote": "A standard liability cap may be acceptable for ordinary service issues, but LargeCo should seek stronger remedies for conﬁdentiality, candidate-data security, privacy, no-training breaches, and misuse of candidate data.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-07",
+      "topic": "Confidentiality standard of care",
+      "severity": "strong",
+      "position": "The receiving party must safeguard confidential information with at least the same care it gives its own similarly sensitive information, and never less than a reasonable degree of care.",
+      "fallback": null,
+      "quote": "in no event less than a reasonable degree of care.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-08",
+      "topic": "Baseline security and AI-governance commitments for the pilot",
+      "severity": "strong",
+      "position": "LargeCo should require encryption, SSO, role-based access, audit logs, least-privilege access, annual security evidence, incident response, and prompt notice of security events for this pilot.",
+      "fallback": null,
+      "quote": "LargeCo should require encryption, SSO, role-based access, audit logs, least-privilege access, annual security evidence, incident response, and prompt notice of security events.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-09",
+      "topic": "AI data-flow transparency",
+      "severity": "strong",
+      "position": "AgentCo should identify who can access candidate data, whether prompts or outputs are logged, how long data is retained, and whether any third-party AI provider can retain or review LargeCo content.",
+      "fallback": null,
+      "quote": "AgentCo should identify who can access candidate data, whether prompts or outputs are logged, how long data is retained, and whether any third-party AI provider can retain or review LargeCo content.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-10",
+      "topic": "Concrete outer bound on breach notification timing",
+      "severity": "strong",
+      "position": "Breach notification cannot rest on a vague \"without undue delay\" standard alone; the playbook's own full-form position ties this to a hard outer bound.",
+      "fallback": "a shorter, deal-appropriate outer bound than the playbook's full-enterprise 8/24-hour regime is an acceptable scaled-down fallback for a pilot of this size",
+      "quote": "in no circumstances will more than twenty-four (24) hours elapse between the time Provider detects or is notified of a Data Security Breach and the time Provider notifies LargeCo of the Data Security Breach.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-11",
+      "topic": "Customer's real audit right should not be unilaterally downgradable by vendor",
+      "severity": "strong",
+      "position": "LargeCo/Customer should retain a genuine right to audit or inspect the provider's security records and practices, not merely a right the vendor can unilaterally replace with a self-selected summary.",
+      "fallback": "vendor may substitute a summary report only where Customer agrees",
+      "quote": "Provider shall provide LargeCo, or an independent third-party auditor selected by LargeCo, access to, and the right to conduct a security audit of, all records, security policies and procedures, and other practices relating to the use, processing, storage and disclosure of LargeCo's Confidential Information.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-12",
+      "topic": "Heavier operational security controls are out of scope for this pilot",
+      "severity": "preference",
+      "position": "Source-code review, monthly scans, background checks, equipment approval, and facility access are the kind of broader controls that should be reserved for future integrations or privileged system access -- not pushed into this pilot's redline.",
+      "fallback": null,
+      "quote": "Broader controls like source-code review, monthly scans, background checks, equipment approval, or facility access should be reserved for future integrations or privileged access to LargeCo systems.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-13",
+      "topic": "Full-MSA risk categories not present in this deal should not be imported",
+      "severity": "preference",
+      "position": "AgentCo's concern that LargeCo's template assumes risks outside this use case (payment card data, consumer tracking technology, direct production-system access, bespoke operational controls) is a legitimate scoping point for this specific pilot -- those playbook provisions should not be imported wholesale here.",
+      "fallback": null,
+      "quote": "concerned that LargeCo's template assumes risks outside the initial use case, such as payment card data, consumer tracking technology, direct production-system access, and bespoke operational controls.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-14",
+      "topic": "Preserve commercial/pricing mechanics already in the vendor draft",
+      "severity": "preference",
+      "position": "LargeCo should preserve clear pilot pricing, renewal terms, expansion mechanics, implementation milestones, invoicing rules, and the right to withhold disputed amounts -- the vendor draft's existing fee/dispute mechanics already largely track this and do not need heavy rework this turn.",
+      "fallback": null,
+      "quote": "LargeCo should preserve clear pilot pricing, renewal terms, expansion mechanics, implementation milestones, invoicing rules, and the right to withhold disputed amounts.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    }
+  ]
+}

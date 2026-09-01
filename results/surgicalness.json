@@ -1,0 +1,26 @@
+{
+ "expert (represented side)": {
+  "n_inline": 730,
+  "n_block": 383,
+  "inline_share": 0.6559,
+  "block_share": 0.3441,
+  "mean_event_chars": 83.8,
+  "n_tasks": 7
+ },
+ "claude-sonnet-5-baseline": {
+  "n_inline": 28,
+  "n_block": 74,
+  "inline_share": 0.2745,
+  "block_share": 0.7255,
+  "mean_event_chars": 352.2,
+  "n_tasks": 8
+ },
+ "claude-sonnet-5-apparatus": {
+  "n_inline": 60,
+  "n_block": 49,
+  "inline_share": 0.5505,
+  "block_share": 0.4495,
+  "mean_event_chars": 215.0,
+  "n_tasks": 8
+ }
+}

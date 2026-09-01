@@ -1,0 +1,121 @@
+{
+  "rules": [
+    {
+      "id": "R-01",
+      "topic": "No training on LargeCo/candidate data",
+      "severity": "walk_away",
+      "position": "AgentCo (and any subcontractor or third-party AI provider it ever uses) must be flatly prohibited from training, building, or enhancing AI/ML on LargeCo or candidate data, with that prohibition flowing down to any future third-party AI technology.",
+      "fallback": null,
+      "quote": "LargeCo cannot approve terms  that allow AgentCo to train on, sell, share, or use",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-02",
+      "topic": "Human review / no autonomous employment decisions",
+      "severity": "walk_away",
+      "position": "TalentFlow must remain decision-support only; the Agreement must expressly bar the AI Technology from automatically ranking, scoring, advancing, rejecting, recommending, or otherwise making or effectuating an employment decision.",
+      "fallback": null,
+      "quote": "TalentFlow must remain a decision-support tool: it should not automatically rank, score,",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-03",
+      "topic": "Ownership/control of candidate materials, prompts, notes, configurations, outputs",
+      "severity": "walk_away",
+      "position": "AI Inputs and AI Outputs (and configurations built on them) must remain both LargeCo Confidential Information and LargeCo intellectual property, not Confidential Information alone.",
+      "fallback": "If IP characterization cannot be preserved for a given item, Confidential Information protection plus a use restriction is the minimum acceptable floor.",
+      "quote": "Candidate materials, prompts, notes, scorecards, job",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-04",
+      "topic": "Pilot scope limited to two approved workflows",
+      "severity": "strong",
+      "position": "The Agreement should tie use of the Service to the two approved workflows (candidate-material summaries and interview-note drafting); expansion into screening, scoring, assessments, background checks, payroll, benefits, or other sensitive HR data requires separate written approval, a security review, and a new order form.",
+      "fallback": null,
+      "quote": "The pilot should stay tied to two approved use cases:",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-05",
+      "topic": "Third-party AI / subprocessor governance",
+      "severity": "strong",
+      "position": "Even if AgentCo's AI is currently homegrown, the Agreement must preserve flow-down obligations (notice, contractual restrictions, no unauthorized retention/training) that apply automatically if Provider ever introduces third-party AI technology.",
+      "fallback": "Accept AgentCo's representation that no third-party AI is used today, provided a conditional flow-down obligation survives for any future change.",
+      "quote": "LargeCo needs clear commitments  on third-party AI providers, subprocessors,",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-06",
+      "topic": "Core security controls",
+      "severity": "strong",
+      "position": "The data security exhibit must commit AgentCo to encryption, SSO, role-based/least-privilege access, audit logging, incident response, and prompt notice of security events, even where broader bespoke controls are conceded.",
+      "fallback": "Accept a SOC 2 (or equivalent) report delivered at least annually in lieu of a bespoke, LargeCo-conducted audit right, so long as it substantiates these core controls.",
+      "quote": "LargeCo should require encryption,  SSO, role-based access, audit logs,",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-06b",
+      "topic": "Annual security evidence, incident response, prompt breach notice",
+      "severity": "strong",
+      "position": "LargeCo needs annual security evidence, an incident-response commitment, and prompt notice of security events; a vague 'without undue delay' breach-notice standard with no outer bound is insufficient.",
+      "fallback": "A defined outer-bound notice window (e.g., a fixed number of hours/days) satisfies 'prompt notice' even if shorter than LargeCo's historical 8-hour standard.",
+      "quote": "least-privilege access, annual security evidence, incident response, and prompt notice of security events.",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-07",
+      "topic": "Broader/bespoke security controls reserved for future integrations",
+      "severity": "preference",
+      "position": "Source-code review, monthly scans, background-check evidence hand-over, equipment approval, and facility access are not required for this pilot and can be conceded now.",
+      "fallback": null,
+      "quote": "Broader controls like source-code review, monthly scans, background checks, equipment approval, or",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-08",
+      "topic": "Enhanced remedy for confidentiality/security/no-training/data-misuse breaches",
+      "severity": "strong",
+      "position": "A standard fees-paid liability cap is acceptable for ordinary service issues, but confidentiality, candidate-data security, privacy, no-training, and data-misuse breaches need a stronger remedy (a higher cap and/or indemnification coverage), not the standard cap alone.",
+      "fallback": "A liability-cap carve-out (e.g., a multiple of fees) for these categories satisfies 'stronger remedies' even without full uncapped liability.",
+      "quote": "remedies for conﬁdentiality, candidate-data security, privacy, no-training breaches, and misuse of",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-09",
+      "topic": "Commercial terms: pricing, invoicing, right to withhold disputed amounts",
+      "severity": "strong",
+      "position": "LargeCo needs to preserve clear pilot pricing, invoicing rules, and the right to withhold disputed amounts, including protection against stale invoices.",
+      "fallback": "A carve-out excluding genuinely disputed invoices from a late-invoice cutoff protection is an acceptable way to reconcile the two provisions.",
+      "quote": "the right to withhold disputed amounts.",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-10",
+      "topic": "Proportionate terms for a lower-cost, less mature vendor",
+      "severity": "preference",
+      "position": "AgentCo was selected as the lowest-cost qualified platform, not the most mature vendor; SLA, insurance, and operational terms should be realistic for a vendor of that size and stage rather than gold-plated enterprise terms.",
+      "fallback": null,
+      "quote": "it is the lowest-cost qualiﬁed platform at a time when Finance is pushing every function to control",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-11",
+      "topic": "No PCI, consumer tracking, production access, or bespoke ops controls out of scope",
+      "severity": "preference",
+      "position": "It is appropriate to narrow Applicable Law, Exhibit C, and related provisions to remove PCI DSS, consumer tracking technology, direct production-system access, and other bespoke operational controls that do not apply to this deployment.",
+      "fallback": null,
+      "quote": "such as payment card data, consumer tracking technology, direct production-system access, and",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    },
+    {
+      "id": "R-12",
+      "topic": "Pilot-scoped deal should not set precedent for a future full-scale agreement",
+      "severity": "strong",
+      "position": "Because this is a limited enterprise pilot with pilot-specific pricing and concessions, the Agreement should preserve language confirming its terms do not serve as precedent for a future, larger engagement.",
+      "fallback": null,
+      "quote": "through a limited enterprise pilot.",
+      "source": "Project_Veritas_Scenario_1_LargeCo_TalentFlow_.docx_-_Google_Docs.extracted.md"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+ "overall": "PASS",
+ "checks": [
+  {
+   "id": "P2-voice",
+   "status": "WARN",
+   "detail": "cmt-633: perfect tense \u2014 brief wants simple past (\"We narrowed\", not \"We have narrowed\")"
+  },
+  {
+   "id": "S1-surgicalness",
+   "status": "WARN",
+   "detail": "16 edit event(s): block share 50% (attorneys ~51%, frontier models 62-81%), mean event size 250 chars (attorneys ~101, models 318-518)"
+  },
+  {
+   "id": "A1-apparatus",
+   "status": "PASS",
+   "detail": "13 rule card(s), 18 issue(s), 70 disposition(s)"
+  },
+  {
+   "id": "C1-coverage",
+   "status": "PASS",
+   "detail": "every tier-1/2 issue has a visible move"
+  },
+  {
+   "id": "C2-dispositions",
+   "status": "PASS",
+   "detail": "all 521 foreign revision(s) and 27 thread(s) covered by 70 disposition(s)"
+  },
+  {
+   "id": "C3-follow-through",
+   "status": "PASS",
+   "detail": "every reject/counter has a visible move"
+  },
+  {
+   "id": "G1-citations",
+   "status": "PASS",
+   "detail": "all 13 rule quote(s) verbatim in grounding"
+  },
+  {
+   "id": "P1-phrases",
+   "status": "PASS",
+   "detail": "49 comment(s) clean of forbidden phrases"
+  },
+  {
+   "id": "V1-validity",
+   "status": "PASS",
+   "detail": "32 tracked change(s), 49 comment(s) by 'Reviewing Counsel (LargeCo)'"
+  }
+ ]
+}

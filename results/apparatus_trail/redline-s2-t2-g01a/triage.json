@@ -1,0 +1,185 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "New 'Deliverables' definition and Section 4.3 assign all AI-generated work product to Customer, reaching into AgentCo's platform IP",
+      "tier": 1,
+      "rule_ids": ["R-02", "R-03"],
+      "paragraph_ids": ["p-013", "p-014", "p-020", "p-030", "p-031"],
+      "planned_action": "Narrow the Deliverables concept so Customer ownership attaches to customer-specific outputs/reports only, and expressly carve out AgentCo's platform, models, reusable workflows, prompt templates, evaluation methods, and non-customer-specific know-how from any assignment."
+    },
+    {
+      "id": "T-02",
+      "title": "Indemnification triggers expanded to any breach of Applicable Law or any representation/warranty/covenant, on top of the IP-infringement indemnity",
+      "tier": 1,
+      "rule_ids": ["R-08", "R-09", "R-10"],
+      "paragraph_ids": ["p-046", "p-047", "p-048", "p-049"],
+      "planned_action": "Strike the breach-of-law and breach-of-any-representation/warranty/covenant indemnity triggers; keep IP-infringement indemnity tied to the AgentCo service with standard exclusions, plus gross negligence/willful misconduct; restore the deleted use-inconsistent-with-agreement exclusion."
+    },
+    {
+      "id": "T-03",
+      "title": "New lettered warranty list and AI-specific warranties promise accurate/reliable/defect-free AI output and delete the as-is disclaimer and Customer Data warranty",
+      "tier": 1,
+      "rule_ids": ["R-04", "R-09"],
+      "paragraph_ids": ["p-050", "p-051", "p-052", "p-053", "p-054", "p-055", "p-056", "p-057", "p-058", "p-059", "p-060", "p-061", "p-062", "p-063", "p-064", "p-065", "p-066", "p-067", "p-069", "p-070", "p-071"],
+      "planned_action": "Strike the AI-output-accuracy, no-defect, and 'highest industry standards' warranties; restore the Customer Data warranty and the as-is/no-guarantee disclaimer language so outputs remain drafts for human review, not warranted decisions."
+    },
+    {
+      "id": "T-04",
+      "title": "Liability cap basis broadened from fees 'paid' to fees 'paid or payable' in the trailing 12 months",
+      "tier": 1,
+      "rule_ids": ["R-08"],
+      "paragraph_ids": ["p-072", "p-073", "p-074"],
+      "planned_action": "Revert the cap basis to amounts actually paid, consistent with the fees-paid-12-months baseline."
+    },
+    {
+      "id": "T-05",
+      "title": "Deleted carve-out barring submission of data subject to special legal protections beyond ordinary personal data",
+      "tier": 1,
+      "rule_ids": ["R-05", "R-06"],
+      "paragraph_ids": ["p-025"],
+      "planned_action": "Reinstate a restriction on submitting regulated/sensitive data types (e.g., background-check, health, immigration, biometric data) that fall outside the summarization/interview-note pilot scope."
+    },
+    {
+      "id": "T-06",
+      "title": "DPA Security and Personal Data Breach clauses deleted and replaced by a prescriptive, unbounded Data Security Requirements block (unrestricted code/production access, uncontrolled testing, 8/24-hour breach notice, 2-year credit monitoring, third-party-beneficiary Affiliates)",
+      "tier": 2,
+      "rule_ids": ["R-07", "R-11", "R-09", "R-14"],
+      "paragraph_ids": ["p-143", "p-147", "p-151", "p-162", "p-169", "p-170", "p-171", "p-172", "p-173", "p-174", "p-175", "p-176", "p-177", "p-178", "p-179", "p-180", "p-182", "p-183", "p-184", "p-185", "p-186", "p-187", "p-188", "p-189", "p-190", "p-191", "p-192", "p-193"],
+      "planned_action": "Restore the commercially-reasonable-security/without-undue-delay-breach-notification language at 3.4/3.6, and mark the new prescriptive exhibit block Reserved, offering SOC 2 or equivalent materials, subprocessor detail, and a reasonable annual audit process instead."
+    },
+    {
+      "id": "T-07",
+      "title": "New SLA Exhibit B imposes 99.99% uptime, 4-hour RTO/15-minute RPO, 8-hour resolution windows, and automatic/stacking service credits",
+      "tier": 2,
+      "rule_ids": ["R-07"],
+      "paragraph_ids": ["p-246", "p-247", "p-248", "p-249", "p-250", "p-251", "p-252", "p-253", "p-254", "p-255", "p-256", "p-257", "p-258", "p-259", "p-260", "p-261", "p-262", "p-263", "p-264", "p-265", "p-266", "p-267", "p-268", "p-269", "p-270", "p-271", "p-272"],
+      "planned_action": "Mark the prescriptive SLA exhibit Reserved and offer a standard SaaS SLA with severity-based support and limited service credits instead."
+    },
+    {
+      "id": "T-08",
+      "title": "Customer's usage right made 'irrevocable' and fully paid-up, in tension with the Term-limited license structure",
+      "tier": 2,
+      "rule_ids": ["R-12"],
+      "paragraph_ids": ["p-024"],
+      "planned_action": "Strike 'irrevocable' so the license remains tied to the Term."
+    },
+    {
+      "id": "T-09",
+      "title": "Subcontracting changed from AgentCo's discretion to requiring Customer's prior written consent",
+      "tier": 2,
+      "rule_ids": ["R-11", "R-12"],
+      "paragraph_ids": ["p-078"],
+      "planned_action": "Replace the consent requirement with a notice/objection model consistent with the DPA's subprocessor notice approach."
+    },
+    {
+      "id": "T-10",
+      "title": "Confidentiality clause rewritten to add one-directional no-use restrictions and injunctive relief running only in Customer's favor",
+      "tier": 2,
+      "rule_ids": ["R-12"],
+      "paragraph_ids": ["p-081"],
+      "planned_action": "Make the enhanced no-use restriction and injunctive-relief remedy mutual so the clause still protects both parties' confidential information equally."
+    },
+    {
+      "id": "T-11",
+      "title": "Usage Data clause loses the carve-out permitting anonymized/aggregated data sharing",
+      "tier": 2,
+      "rule_ids": ["R-12"],
+      "paragraph_ids": ["p-083"],
+      "planned_action": "Reinstate the anonymized/aggregated Usage Data carve-out needed for standard product analytics across customers."
+    },
+    {
+      "id": "T-12",
+      "title": "Use of Name clause deleted entirely, removing AgentCo's ability to reference Customer",
+      "tier": 2,
+      "rule_ids": ["R-13"],
+      "paragraph_ids": ["p-085"],
+      "planned_action": "Reinstate a reference-customer/logo-use right, since LargeCo is a significant potential reference for AgentCo."
+    },
+    {
+      "id": "T-13",
+      "title": "Force Majeure carve-outs for pandemics, riots, and embargoes deleted",
+      "tier": 2,
+      "rule_ids": ["R-07", "R-12"],
+      "paragraph_ids": ["p-095"],
+      "planned_action": "Reinstate the deleted force majeure events."
+    },
+    {
+      "id": "T-14",
+      "title": "Order Form precedence clause and warranty section cross-reference a 'Privacy and Data Security Requirements' Exhibit C that is actually the Insurance Requirements exhibit",
+      "tier": 3,
+      "rule_ids": ["R-07"],
+      "paragraph_ids": ["p-039", "p-056"],
+      "planned_action": "Fix the broken cross-reference once the DPA security language is restored at Section 3.4."
+    },
+    {
+      "id": "T-15",
+      "title": "Insurance Requirements exhibit includes categories facially mismatched to an AI SaaS engagement (Contractors Pollution Liability, Commercial Crime with a garbled loss-payee name)",
+      "tier": 2,
+      "rule_ids": ["R-12", "R-12b"],
+      "paragraph_ids": ["p-297", "p-303", "p-305"],
+      "planned_action": "Mark the Pollution Liability and Commercial Crime/Employee Dishonesty sections Reserved as inapplicable to a software/AI services engagement; flag the Media-company rider in the Professional Liability section as likely inapplicable boilerplate."
+    },
+    {
+      "id": "T-16",
+      "title": "Arbitration section deleted with no substitute forum/venue clause inserted",
+      "tier": 3,
+      "rule_ids": ["R-12b"],
+      "paragraph_ids": ["p-087", "p-088", "p-089", "p-090"],
+      "planned_action": "Note the gap; a specific forum is a mechanical drafting point, not a business term we can supply new content for here given the tooling can't add fresh text where no live anchor text survives."
+    },
+    {
+      "id": "T-17",
+      "title": "Customer's warranty that it obtained necessary notices/consents before providing Customer Data deleted from the DPA",
+      "tier": 1,
+      "rule_ids": ["R-09", "R-06"],
+      "paragraph_ids": ["p-158"],
+      "planned_action": "Reinstate Customer's warranty that it has provided required notices and obtained necessary consents/authorizations for the candidate data it uploads."
+    }
+  ],
+  "dispositions": [
+    {"target": "p-001", "decision": "accept", "rule_ids": [], "reason": "Bilateral cover page naming LargeCo as Customer and defining Party/Parties is standard drafting and doesn't shift risk; unfilled AgentCo entity blanks are LargeCo's own placeholders to complete before signature, not a legal position."},
+    {"target": "p-004", "decision": "accept", "rule_ids": [], "reason": "Minor recital wording change with no substantive effect."},
+    {"target": "p-007..p-011", "decision": "accept", "rule_ids": [], "reason": "Moving the AgentCo/Customer party definitions into the preamble is a structural, not substantive, change now that the preamble defines both parties."},
+    {"target": "p-013..p-022", "decision": "counter", "rule_ids": ["R-02", "R-03"], "reason": "The pure renumbering is harmless, but the new Deliverables definition folded into 'Service' sweeps AgentCo-generated work product broadly enough to threaten platform/model ownership -- see T-01."},
+    {"target": "p-024", "decision": "counter", "rule_ids": ["R-12"], "reason": "See T-08 -- an irrevocable, perpetual usage grant conflicts with a Term-limited subscription and doesn't scale across customers."},
+    {"target": "p-025", "decision": "counter", "rule_ids": ["R-05", "R-06"], "reason": "See T-05 -- removing the bar on submitting specially-protected data expands AgentCo's exposure beyond the summarization/interview-note pilot scope."},
+    {"target": "p-030..p-031", "decision": "counter", "rule_ids": ["R-02", "R-03"], "reason": "See T-01 -- the new Deliverables ownership/assignment clause needs to be scoped so it doesn't reach AgentCo's underlying platform and reusable workflows."},
+    {"target": "p-036", "decision": "accept", "rule_ids": [], "reason": "Extended invoice-correction and stale-invoice windows and jurisdiction-itemized tax lines are administrative and commercially survivable for a six-month pilot."},
+    {"target": "p-038", "decision": "accept", "rule_ids": [], "reason": "A 30-day cure period before suspension in exchange for the finance-charge mechanic is a standard, low-cost trade for an enterprise pilot of this size."},
+    {"target": "p-039", "decision": "counter", "rule_ids": ["R-07"], "reason": "See T-14 -- the Order Form precedence clause defers to a 'Privacy and Data Security Requirements' Exhibit C that doesn't match the actual (Insurance) Exhibit C in this draft; needs to point to the restored DPA security language instead."},
+    {"target": "p-042..p-043", "decision": "accept", "rule_ids": [], "reason": "Narrowing the suspension trigger to material jeopardy, extending the post-termination data-download window, and requiring a destruction certificate are reasonable, audit-friendly asks consistent with data export/deletion and audit-log commitments AgentCo can support."},
+    {"target": "p-046..p-049", "decision": "counter", "rule_ids": ["R-08", "R-09", "R-10"], "reason": "See T-02 -- indemnification triggers were expanded well beyond IP infringement into any breach of law or of the (now extensive) warranty list, which effectively converts routine contract risk into indemnified, uncapped-adjacent exposure."},
+    {"target": "p-050..p-071", "decision": "counter", "rule_ids": ["R-04", "R-09"], "reason": "See T-03 -- the new warranty list promises accurate, reliable, defect-free AI output and deletes the as-is disclaimer, which can't be reconciled with TalentFlow outputs being drafts for human review."},
+    {"target": "p-072..p-074", "decision": "counter", "rule_ids": ["R-08"], "reason": "See T-04 -- broadening the cap's fee basis to amounts 'payable' (not just paid) raises the ceiling on AgentCo's exposure beyond the protected baseline. We accept, without further action, the separate deletion of the uncapped carve-out for Customer's own breach of Section 3.2, since that only reduces Customer's exposure and doesn't affect AgentCo's risk."},
+    {"target": "p-076..p-077", "decision": "accept", "rule_ids": [], "reason": "Making assignment mutual (rather than AgentCo-only) is a standard, reciprocal term that doesn't increase AgentCo's risk."},
+    {"target": "p-078", "decision": "counter", "rule_ids": ["R-11", "R-12"], "reason": "See T-09 -- a hard consent requirement for every subcontractor is more restrictive than the subprocessor-notice model AgentCo can support at scale."},
+    {"target": "p-081", "decision": "counter", "rule_ids": ["R-12"], "reason": "See T-10 -- the enhanced no-use restriction and injunctive-relief remedy were drafted to run only in Customer's favor; a one-directional confidentiality clause doesn't generalize across AgentCo's customer base."},
+    {"target": "p-083", "decision": "counter", "rule_ids": ["R-12"], "reason": "See T-11 -- losing the anonymized/aggregated Usage Data carve-out blocks standard cross-customer product analytics."},
+    {"target": "p-084", "decision": "accept", "rule_ids": [], "reason": "Naming-only correction, no substantive change."},
+    {"target": "p-085", "decision": "counter", "rule_ids": ["R-13"], "reason": "See T-12 -- LargeCo is a significant potential reference customer for AgentCo; losing the right to reference the relationship at all is an unnecessary one-off concession."},
+    {"target": "p-086", "decision": "accept", "rule_ids": [], "reason": "Delaware governing law is neutral for a Delaware-formed company and doesn't shift risk."},
+    {"target": "p-087..p-090", "decision": "counter", "rule_ids": ["R-12b"], "reason": "See T-16 -- arbitration was struck with nothing put in its place, leaving disputes without an agreed forum; we're flagging the gap since the tooling can't insert a fresh venue clause where no anchor text survives."},
+    {"target": "p-094", "decision": "accept", "rule_ids": [], "reason": "Limiting the sanctions/export-control catch-all to the specifically named U.S. lists is a reasonable scoping request from a company that has to track multiple overlapping compliance regimes, and doesn't touch AgentCo's core risk items."},
+    {"target": "p-095", "decision": "counter", "rule_ids": ["R-07", "R-12"], "reason": "See T-13 -- removing pandemic/riot/embargo events shifts operational risk from systemic events onto AgentCo's SLA performance without any offsetting benefit."},
+    {"target": "p-096", "decision": "accept", "rule_ids": [], "reason": "Customer retaining Feedback IP while granting AgentCo a broad, perpetual, royalty-free license to use it is a workable, commonly negotiated outcome that still lets AgentCo use feedback across its customer base."},
+    {"target": "p-143", "decision": "counter", "rule_ids": ["R-07", "R-11"], "reason": "See T-06 -- deleting the DPA's baseline security commitment in favor of the much more prescriptive exhibit isn't something AgentCo can standardize across enterprise customers."},
+    {"target": "p-147", "decision": "counter", "rule_ids": ["R-07", "R-09"], "reason": "See T-06 -- the without-undue-delay breach-notification commitment is being replaced by an 8/24-hour regime tied to the same prescriptive exhibit."},
+    {"target": "p-151", "decision": "counter", "rule_ids": ["R-11"], "reason": "Moving from general sub-processor authorization (with notice and objection rights) to a stricter model, and removing AgentCo's own termination right when an objection can't be resolved, goes beyond the subprocessor-notice commitment AgentCo can support."},
+    {"target": "p-158", "decision": "counter", "rule_ids": ["R-09", "R-06"], "reason": "See T-17 -- Customer's warranty that it obtained the necessary notices/consents before uploading candidate data is basic protection against liability for someone else's data-collection failures."},
+    {"target": "p-160..p-168", "decision": "accept", "rule_ids": [], "reason": "Cooperation, configuration-responsibility, and U.S. Privacy Law / CCPA provisions are unchanged or only naming-corrected."},
+    {"target": "p-169..p-193", "decision": "counter", "rule_ids": ["R-07", "R-09", "R-14"], "reason": "See T-06 -- this new exhibit imposes unrestricted code/production-system access, uncontrolled customer-run testing, an 8-hour flaw-remediation SLA, 2-year credit monitoring at AgentCo's cost, and third-party-beneficiary status for Customer's Affiliates -- exactly the kind of bespoke, unbounded operational controls outside the pilot's use case that AgentCo can't standardize."},
+    {"target": "p-216..p-245", "decision": "accept", "rule_ids": [], "reason": "Empty filler paragraphs with no substantive content."},
+    {"target": "p-246..p-272", "decision": "counter", "rule_ids": ["R-07"], "reason": "See T-07 -- 99.99% uptime, 4-hour RTO/15-minute RPO, and 8-hour resolution windows with automatic, stacking service credits go well beyond the standard SaaS SLA AgentCo can offer."},
+    {"target": "p-273..p-288", "decision": "accept", "rule_ids": [], "reason": "Empty filler paragraphs with no substantive content."},
+    {"target": "p-289..p-296", "decision": "accept", "rule_ids": [], "reason": "Standard CGL and Workers' Compensation limits are a routine cost of doing an enterprise pilot and aren't addressed in AgentCo's playbook as a position to resist."},
+    {"target": "p-297", "decision": "accept", "rule_ids": [], "reason": "The core Professional Liability / Technology E&O ask is reasonable for an AI vendor; we flagged the embedded media-perils language as likely inapplicable boilerplate without conditioning acceptance of the rest of the clause on its removal."},
+    {"target": "p-298..p-302", "decision": "accept", "rule_ids": [], "reason": "Cyber Liability and Technological E&O coverage are standard and appropriate for an AI SaaS vendor handling candidate data."},
+    {"target": "p-303..p-304", "decision": "counter", "rule_ids": ["R-12", "R-12b"], "reason": "See T-15 -- Contractors Pollution Liability (mold/e-waste/environmental conditions) has no bearing on a software/AI services engagement; p-304 is the blank paragraph immediately following it, covered by the same mark_reserved sweep."},
+    {"target": "p-305", "decision": "counter", "rule_ids": ["R-12", "R-12b"], "reason": "See T-15 -- Commercial Crime/Employee Dishonesty coverage is likewise mismatched to this engagement and the clause carries a garbled loss-payee name suggesting leftover template text."},
+    {"target": "p-306..p-318", "decision": "accept", "rule_ids": [], "reason": "General insurance conditions (additional insured, waiver of subrogation, carrier rating, notice of change) are standard boilerplate that ride along with whatever coverage is ultimately agreed."},
+    {"target": "cmt-337", "decision": "accept", "rule_ids": [], "reason": "Scoping export-control compliance to the specifically named U.S. sanctions lists is a reasonable ask from a large multinational and doesn't affect AgentCo's core risk items."},
+    {"target": "cmt-354", "decision": "counter", "rule_ids": ["R-07", "R-11"], "reason": "The referenced 'addition below' is the prescriptive Data Security Requirements exhibit we're pushing back on in T-06; replying to point back to our restored Section 3.4 language."},
+    {"target": "cmt-357", "decision": "counter", "rule_ids": ["R-07", "R-09"], "reason": "The referenced 'addition below' is the 8/24-hour breach-notification regime we're pushing back on in T-06; replying to point back to our restored Section 3.6 language."}
+  ]
+}

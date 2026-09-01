@@ -53,11 +53,59 @@ citation.
 
 ## Results
 
-*(A/B on an 8-task subset: the lexicographically first task in every
+A/B on an 8-task subset: the lexicographically first task in every
 scenario-1 and scenario-2 turn cell — 4 turns × both sides × two SaaS-MSA
 scenarios. The subset rule was fixed before any run; scenario 3 was dropped
 for budget before any scenario-3 task was run. Same frozen tasks, same
-frozen judge panel, same model — only the agent scaffold differs.)*
+frozen 3-judge panel, same model (`claude-sonnet-5`) — only the agent
+scaffold differs.
+
+**The scaffold closed the form gap, not the judgment gap.** That split is
+the finding.
+
+### Behavioral profile (deterministic, docx-level — no judges)
+
+| actor | inline share | block share | mean edit (chars) |
+|---|---|---|---|
+| attorney (represented side, golden files) | 66% | 34% | 84 |
+| claude-code baseline | 27% | 73% | 352 |
+| **+ apparatus** | **55%** | **45%** | **215** |
+
+The baseline reproduces the published frontier failure profile almost
+exactly (62–81% block edits, 318–518-char means). The apparatus arm moves
+most of the way to attorney drafting norms — and every one of its 127
+playbook rule-card quotes across the grid verified verbatim against the
+grounding text (0 fabricated), with 8/8 final gate reports PASS, 83 triaged
+issues, and 259 clause-level dispositions collected as machine-checkable
+artifacts.
+
+### Judge panel (attorney rubrics, 3-judge majority)
+
+| arm | overall (turn-weighted) | 95% CI |
+|---|---|---|
+| claude-code baseline | 48.8 | 31.5–65.6 |
+| + apparatus | 40.2 | 26.7–52.8 |
+
+No improvement — a statistically indistinguishable decline at n = 8 input
+groups, concentrated in the *strategic* categories (deal-closing
+orientation 65→22, counterparty-acceptance prediction 50→25) while legal
+correctness stayed flat (54→49). An exploratory cut over reject-shaped
+rubrics shows the over-acceptance bias did not improve either.
+
+### Reading
+
+Deterministic verification moved everything deterministic verifiers can
+see: edit shape, citation integrity, coverage, disposition discipline.
+It did not move — and slightly taxed — the strategic judgment the rubrics
+actually grade. **RedlineBench's rubric layer resisted process
+scaffolding**, which is exactly what a good benchmark should do, and it
+sharpens where the remaining gap lives: not in drafting mechanics, but in
+negotiation judgment. That is a *training-signal* problem, not a
+prompting problem — see [docs/MEMO.md](docs/MEMO.md).
+
+Full outputs: [`results/`](results/) — metrics summary, per-category
+tables, behavioral profiles, all 16 redlined .docx files (open them in
+Word's Review pane), and the apparatus audit trail per task.
 
 ## Reproduce
 

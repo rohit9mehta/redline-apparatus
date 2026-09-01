@@ -1,0 +1,93 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "No liability cap or indirect-damages waiver exists anywhere in the agreement",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-12"],
+      "paragraph_ids": ["p-082"],
+      "planned_action": "Insert a new LIMITATION OF LIABILITY section after Indemnification (before the signature block) capping total liability at fees paid in the trailing 12 months, with carve-outs for gross negligence/willful misconduct, indemnification, and confidentiality/data-security/DPA breaches (which get a higher, defined multiple of that cap), plus a mutual waiver of indirect/consequential damages."
+    },
+    {
+      "id": "T-02",
+      "title": "Indemnification (Sec. 9 / p-081) is one-way, uncapped, and swallows the liability cap by covering any breach of any representation/warranty/covenant",
+      "tier": 1,
+      "rule_ids": ["R-01", "R-02", "R-03", "R-04"],
+      "paragraph_ids": ["p-081"],
+      "planned_action": "Narrow indemnity trigger (b) to remove the catch-all 'breach of any representation, warranty, undertaking, or covenant' language (which functions as an uncapped general breach-of-contract indemnity), and add standard IP-indemnity exclusions (unmodified service, no unapproved combination, no continued use after notice/cure, use consistent with agreement)."
+    },
+    {
+      "id": "T-03",
+      "title": "AI output warranty overpromises accuracy/reliability of AI-generated hiring-adjacent materials",
+      "tier": 1,
+      "rule_ids": ["R-07", "R-07b"],
+      "paragraph_ids": ["p-033"],
+      "planned_action": "Delete clause (i) warranting AI Technology 'will render accurate and reliable results' - outputs are drafts for human review, not warranted as accurate or complete."
+    },
+    {
+      "id": "T-04",
+      "title": "Provider Technology definition assigns AgentCo platform improvements made by LargeCo back to LargeCo",
+      "tier": 1,
+      "rule_ids": ["R-05", "R-05b"],
+      "paragraph_ids": ["p-020"],
+      "planned_action": "Delete the sentence granting LargeCo ownership of modifications/improvements to Provider Technology - AgentCo must retain ownership of its own platform and reusable technology."
+    },
+    {
+      "id": "T-05",
+      "title": "Training representation contains an internal carve-out that contradicts the flat no-training prohibition in the same paragraph",
+      "tier": 1,
+      "rule_ids": ["R-06"],
+      "paragraph_ids": ["p-031"],
+      "planned_action": "Remove 'and only augmented with LargeCo training sets, as may be permitted by LargeCo in writing' so the representation is unambiguous and matches the absolute no-training commitment stated in the next sentence."
+    },
+    {
+      "id": "T-06",
+      "title": "PCI DSS / payment-card data obligations throughout, despite TalentFlow never touching payment card data",
+      "tier": 2,
+      "rule_ids": ["R-08"],
+      "paragraph_ids": ["p-008", "p-177", "p-219"],
+      "planned_action": "Remove PCI DSS references from the Applicable Law and Personal Financial Information definitions, and remove the standalone PCI DSS Compliance section (Exhibit C) via mark_reserved, since the pilot involves no payment-card data."
+    },
+    {
+      "id": "T-07",
+      "title": "Consumer tracking-technology / cookie section is inapplicable to an internal HR recruiting tool",
+      "tier": 2,
+      "rule_ids": ["R-08"],
+      "paragraph_ids": ["p-218"],
+      "planned_action": "Mark the Tracking Technologies; No Respawning section Reserved - TalentFlow does not deploy cookies or tracking technology on LargeCo's systems."
+    },
+    {
+      "id": "T-08",
+      "title": "Unrestricted production-code access and monthly scanning/uncontrolled testing rights",
+      "tier": 2,
+      "rule_ids": ["R-10", "R-11"],
+      "paragraph_ids": ["p-186", "p-188", "p-192"],
+      "planned_action": "Remove the unrestricted code-access/production-code-copy obligations and the monthly Internet security scan / on-demand penetration test rights, replacing with a reasonable annual audit process consistent with SOC2/questionnaire-based diligence."
+    },
+    {
+      "id": "T-09",
+      "title": "99.99% uptime commitment and 8-hour flaw-resolution SLA are not commercially realistic for a startup SaaS pilot",
+      "tier": 2,
+      "rule_ids": ["R-10", "R-10b"],
+      "paragraph_ids": ["p-100"],
+      "planned_action": "Reduce the Uptime Commitment from 99.99% to a standard 99.9% SaaS commitment."
+    },
+    {
+      "id": "T-10",
+      "title": "Best-efforts support standard is an unbounded obligation",
+      "tier": 3,
+      "rule_ids": ["R-10b"],
+      "paragraph_ids": ["p-102"],
+      "planned_action": "Change 'best efforts' to 'commercially reasonable efforts' for Support obligations."
+    },
+    {
+      "id": "T-11",
+      "title": "Enhanced biometric identity verification for vendor personnel is a bespoke operational control beyond what a Series A SaaS vendor can operationalize at scale",
+      "tier": 3,
+      "rule_ids": ["R-13"],
+      "paragraph_ids": ["p-220"],
+      "planned_action": "Remove the biometric/enhanced identity-verification specifics (liveness, telecom/device verification), leaving standard criminal background check and identity verification obligations."
+    }
+  ],
+  "dispositions": []
+}

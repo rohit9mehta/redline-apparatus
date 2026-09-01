@@ -1,0 +1,147 @@
+{
+  "n_trials": 16,
+  "n_models": 2,
+  "models": [
+    "claude-sonnet-5-baseline",
+    "claude-sonnet-5-apparatus"
+  ],
+  "include_fable_5": false,
+  "judge_method": "panel",
+  "surgicalness_threshold": 0.3,
+  "leaderboard": [
+    {
+      "model": "claude-sonnet-5-baseline",
+      "overall_turn_weighted": 0.488,
+      "best_at_k_turn_weighted": 0.488,
+      "ci": [
+        0.3149,
+        0.6565
+      ],
+      "by_turn": {
+        "3": 0.5292,
+        "2": 0.6381,
+        "1": 0.2554,
+        "4": 0.5292
+      },
+      "by_side_turn_weighted": {
+        "A": 0.5889,
+        "B": 0.387
+      },
+      "by_scenario_turn_weighted": {
+        "1": 0.4474,
+        "2": 0.5286
+      },
+      "by_category": {
+        "Legal correctness": 0.5369,
+        "Commercial Context": 0.3388,
+        "Deal-closing Orientation": 0.6522,
+        "Counterparty Acceptance Prediction": 0.5,
+        "Negotiation Quality": 0.5
+      },
+      "diagnostics": {
+        "redlines": 9.5,
+        "edit_operations": 12.8,
+        "total_revisions": 23.5,
+        "touched_paragraphs": 11.6,
+        "comments_added": 26.4,
+        "excess_redlines": 0.8,
+        "median_insertion_chars": 246.2
+      },
+      "n_gate_failures": 0,
+      "n_trials": 8,
+      "n_input_groups": 8
+    },
+    {
+      "model": "claude-sonnet-5-apparatus",
+      "overall_turn_weighted": 0.4018,
+      "best_at_k_turn_weighted": 0.4018,
+      "ci": [
+        0.2674,
+        0.5277
+      ],
+      "by_turn": {
+        "3": 0.3541,
+        "2": 0.5961,
+        "1": 0.1901,
+        "4": 0.4667
+      },
+      "by_side_turn_weighted": {
+        "A": 0.4596,
+        "B": 0.3439
+      },
+      "by_scenario_turn_weighted": {
+        "1": 0.4214,
+        "2": 0.3821
+      },
+      "by_category": {
+        "Legal correctness": 0.4918,
+        "Commercial Context": 0.2932,
+        "Deal-closing Orientation": 0.2174,
+        "Counterparty Acceptance Prediction": 0.25,
+        "Negotiation Quality": 0.3833
+      },
+      "diagnostics": {
+        "redlines": 10.2,
+        "edit_operations": 13.6,
+        "total_revisions": 26.1,
+        "touched_paragraphs": 11.6,
+        "comments_added": 24.4,
+        "excess_redlines": 0.5,
+        "median_insertion_chars": 126.1
+      },
+      "n_gate_failures": 0,
+      "n_trials": 8,
+      "n_input_groups": 8
+    }
+  ],
+  "verbosity_turn1": {
+    "expert": {
+      "redlines_per_task": 30.07,
+      "edits_per_touched_para": 3.105,
+      "avg_edit_length": 101.0,
+      "n_tasks": 14
+    },
+    "claude-sonnet-5-apparatus": {
+      "redlines_per_task": 10,
+      "edits_per_touched_para": 1.266,
+      "avg_edit_length": 296.2,
+      "overlap_rate": 0.3929,
+      "n_tasks": 2,
+      "n_tasks_with_overlap": 2
+    },
+    "claude-sonnet-5-baseline": {
+      "redlines_per_task": 12.5,
+      "edits_per_touched_para": 1.02,
+      "avg_edit_length": 530.3,
+      "overlap_rate": 0.3311,
+      "n_tasks": 2,
+      "n_tasks_with_overlap": 2
+    }
+  },
+  "surgicalness": {
+    "expert": {
+      "n_inline": 13354,
+      "n_block": 14108,
+      "inline_share": 0.4863,
+      "block_share": 0.5137,
+      "surgicalness_score": 0.4863,
+      "n_tasks": 138
+    },
+    "claude-sonnet-5-apparatus": {
+      "n_inline": 60,
+      "n_block": 49,
+      "inline_share": 0.5505,
+      "block_share": 0.4495,
+      "surgicalness_score": 0.5505,
+      "n_tasks": 8
+    },
+    "claude-sonnet-5-baseline": {
+      "n_inline": 28,
+      "n_block": 74,
+      "inline_share": 0.2745,
+      "block_share": 0.7255,
+      "surgicalness_score": 0.2745,
+      "n_tasks": 8
+    }
+  }
+}

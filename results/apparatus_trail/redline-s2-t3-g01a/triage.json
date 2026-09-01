@@ -1,0 +1,258 @@
+{
+  "issues": [
+    {
+      "id": "T-01",
+      "title": "Restore 'create Derivative Works from' to the confidential-information use restriction",
+      "tier": 1,
+      "rule_ids": ["R-22"],
+      "paragraph_ids": ["p-081"],
+      "planned_action": "Re-insert the deleted phrase so Provider is barred from creating derivative works from LargeCo confidential information, matching the walk-away no-derivative-works restriction."
+    },
+    {
+      "id": "T-02",
+      "title": "Add confidentiality/data-security/no-training carve-out to the liability cap",
+      "tier": 1,
+      "rule_ids": ["R-19"],
+      "paragraph_ids": ["p-074"],
+      "planned_action": "Insert a carve-out from the standard 12-month-fees cap for breach of confidentiality, data security, or the no-training restriction, in exchange for accepting AgentCo's refusal to broaden Section 8 indemnification beyond third-party IP claims."
+    },
+    {
+      "id": "T-03",
+      "title": "Reinstate a narrowed security audit right (SOC 2 + reasonable information requests)",
+      "tier": 1,
+      "rule_ids": ["R-10", "R-18"],
+      "paragraph_ids": ["p-152", "p-183"],
+      "planned_action": "Replace the wholesale-deleted Security Audit Rights clause with a narrower right requiring an annual SOC 2 (or equivalent) report plus reasonable additional security information on request, using AgentCo's own SOC 2 offer (cmt-1076) rather than the on-site/penetration-test audit model AgentCo rejected."
+    },
+    {
+      "id": "T-04",
+      "title": "Tighten breach notification timing and restore suspected-breach trigger",
+      "tier": 1,
+      "rule_ids": ["R-09"],
+      "paragraph_ids": ["p-142", "p-186"],
+      "planned_action": "Move the hard notification cap from AgentCo's countered 48 hours back to 24 hours, and restore 'suspected' breaches and third-party claims/threats as notice triggers, while keeping AgentCo's 'reasonable efforts' wording and 24-hour soft target."
+    },
+    {
+      "id": "T-05",
+      "title": "Narrow the AI-specific representations instead of deleting them wholesale",
+      "tier": 2,
+      "rule_ids": ["R-23", "R-15"],
+      "paragraph_ids": ["p-053", "p-069"],
+      "planned_action": "Reinsert the AI rep/warranty clause without the absolute 'will render accurate and reliable results' claim (consistent with TalentFlow's decision-support positioning), keeping the industry-standard development/security/monitoring warranty and the training-data-rights/transparency warranty."
+    },
+    {
+      "id": "T-06",
+      "title": "Require consent before AgentCo uses LargeCo's name or logo",
+      "tier": 2,
+      "rule_ids": [],
+      "paragraph_ids": ["p-088"],
+      "planned_action": "Add a written-consent requirement to the reference/logo-use clause, picking up AgentCo's own openness to a limitation (cmt-465)."
+    },
+    {
+      "id": "T-07",
+      "title": "Restore media-company insurance rider and no-cost risk-transfer endorsements",
+      "tier": 2,
+      "rule_ids": ["R-24"],
+      "paragraph_ids": ["p-377", "p-385", "p-388", "p-389", "p-390"],
+      "planned_action": "Accept AgentCo's reduced per-occurrence/aggregate dollar limits as reasonable for a Series A vendor at pilot scale, but restore the media-company coverage rider, the Commercial Crime loss-payee endorsement, and the Additional Insured / Waiver of Subrogation / primary-non-contributory endorsements, none of which carry a marginal cost tied to policy limits."
+    },
+    {
+      "id": "T-08",
+      "title": "Fix undefined 'Transition Period' reference in the data-export/disposal clause",
+      "tier": 3,
+      "rule_ids": ["R-07"],
+      "paragraph_ids": ["p-083"],
+      "planned_action": "Remove the undefined 'Transition Period' term flagged by AgentCo (cmt-411) while preserving the 60-day post-termination export window."
+    },
+    {
+      "id": "T-09",
+      "title": "Fix garbled 'ustomer' merge artifact in the Documentation definition",
+      "tier": 3,
+      "rule_ids": [],
+      "paragraph_ids": ["p-014"],
+      "planned_action": "Correct the corrupted defined term so the Documentation definition reads 'available to Customer' rather than 'available to ustomer'."
+    }
+  ],
+  "dispositions": [
+    {
+      "target": "p-001..p-012",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "Party-name conversion (AgentCo/Customer) is mechanical and already mutually confirmed (cmt-0, cmt-10)."
+    },
+    {
+      "target": "p-013..p-031",
+      "decision": "accept",
+      "rule_ids": ["R-02", "R-16"],
+      "reason": "AgentCo's rejection of the standalone 'Deliverables' definition and ownership clause (cmt-71), and the definition renumbering that followed it, are acceptable because Section 4.1 already gives Customer ownership of all Content, defined to include Output -- the candidate summaries and interview notes TalentFlow generates. That existing clause independently satisfies LargeCo's requirement that AI-generated work product remain LargeCo-owned, making the duplicate Deliverables clause unnecessary. The Term-scoped, non-exclusive access license at p-024 also gives LargeCo everything it needs for a pilot that ends with the Term."
+    },
+    {
+      "target": "p-032..p-045",
+      "decision": "accept",
+      "rule_ids": ["R-07"],
+      "reason": "Customer Data ownership, payment terms, cure periods, and the post-termination data export/deletion terms (cmt-120, cmt-130, cmt-145) are already resolved and consistent with LargeCo's data-return requirements."
+    },
+    {
+      "target": "p-046..p-074",
+      "decision": "counter",
+      "rule_ids": ["R-19"],
+      "reason": "AgentCo's refusal to broaden Section 8 indemnification beyond third-party IP claims (cmt-170) is a realistic limit for a Series A vendor and is accepted, and the conform-to-specifications disclaimer is fine given TalentFlow's decision-support framing. But confidentiality, data-security, and no-training breaches still need a stronger remedy than the standard fees-paid cap -- addressed via a liability-cap carve-out at p-074 (T-02) rather than expanded indemnification."
+    },
+    {
+      "target": "p-053..p-070",
+      "decision": "counter",
+      "rule_ids": ["R-23", "R-15"],
+      "reason": "The bulk of the AI/service representations list (a)-(l) was adopted; AgentCo's rejection of sub-clause (j) (no recurring customer complaints) is operational-quality boilerplate that doesn't touch data security, confidentiality, training, or ownership. But AgentCo deleted the entire separate AI-specific representations clause (cmt-334), objecting mainly to the 'accurate and reliable results' warranty given user-controlled inputs -- fair, and in tension with TalentFlow's own decision-support framing. The clause's training-data-rights warranty is a separate, important commitment that shouldn't have been deleted along with it. See T-05."
+    },
+    {
+      "target": "p-075..p-080",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "General-terms heading, severability, and open-source warranty are standard and unchanged in substance."
+    },
+    {
+      "target": "p-076..p-078",
+      "decision": "accept",
+      "rule_ids": ["R-11"],
+      "reason": "Mutual assignment rights are already agreed (cmt-384). Subcontracting is fine as a general responsibility clause because the DPA's Sub-Processor engagement/objection mechanism (Section 3.8) already gives LargeCo notice and objection rights specific to Customer Data, which is where the real risk sits (cmt-389)."
+    },
+    {
+      "target": "p-081..p-082",
+      "decision": "counter",
+      "rule_ids": ["R-22"],
+      "reason": "AgentCo accepted nearly all of the restrictive confidential-information use language but deleted 'create Derivative Works from.' That's a walk-away gap -- addressed in T-01."
+    },
+    {
+      "target": "p-083",
+      "decision": "accept_with_edit",
+      "rule_ids": ["R-07"],
+      "reason": "The 60-day post-termination export/support right is sound, but it references an undefined 'Transition Period' that AgentCo correctly flagged (cmt-411); we confirmed the fix by reply and standalone comment since the underlying text isn't independently addressable in this draft. AgentCo's added 'at Customer's expense' qualifier for export support is a reasonable cost allocation. The clause-grouping point in cmt-408 is organizational only -- the disposal and injunctive-relief rights stand regardless of how they're grouped."
+    },
+    {
+      "target": "p-084..p-085",
+      "decision": "accept",
+      "rule_ids": ["R-21"],
+      "reason": "AgentCo narrowed the injunctive-relief trigger to confidentiality-obligation breaches specifically, which is precise rather than a weakening -- confidentiality is exactly the category where LargeCo needs the equitable remedy."
+    },
+    {
+      "target": "p-086..p-087",
+      "decision": "accept",
+      "rule_ids": ["R-01"],
+      "reason": "Usage Data is defined to exclude Customer Data and Content, so using it to improve the platform doesn't touch candidate data (cmt-459). The No Training clause remains intact with only a narrow, necessary cloud-storage carve-out (AWS) for retention, not for training or human review (cmt-460) -- this satisfies the no-training requirement cleanly."
+    },
+    {
+      "target": "p-088",
+      "decision": "counter",
+      "rule_ids": [],
+      "reason": "AgentCo signaled openness to limiting the name/logo-use right (cmt-465); addressed in T-06."
+    },
+    {
+      "target": "p-089..p-093",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "The shift from arbitration to Delaware governing law was already mutually accepted (cmt-470) in an earlier turn; not revisiting a closed, non-core point."
+    },
+    {
+      "target": "p-094..p-096",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "Notice, no-waiver, and entire-agreement clauses are standard and unchanged in substance."
+    },
+    {
+      "target": "p-097",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "AgentCo declined to narrow the mutual export-control compliance list (cmt-484, reply to cmt-483). The broader list doesn't create asymmetric risk for LargeCo, which must comply with export control law regardless; not worth re-litigating."
+    },
+    {
+      "target": "p-098..p-102",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "Force majeure carve-outs and the Feedback IP-ownership clause (Customer retains Feedback IP, grants back a limited license, no attribution) already match LargeCo's required position (cmt-489)."
+    },
+    {
+      "target": "p-103..p-145",
+      "decision": "accept",
+      "rule_ids": ["R-12", "R-17"],
+      "reason": "DPA scope, roles, definitions, Customer Instructions, and notice-to-Customer obligations are AgentCo's own template terms and already satisfy LargeCo's subprocessor-transparency and data-flow requirements."
+    },
+    {
+      "target": "p-146..p-175",
+      "decision": "counter",
+      "rule_ids": ["R-08", "R-10", "R-18"],
+      "reason": "The imported Information Security Program requirements (encryption, access controls, segregation, authentication) were substantially adopted; AgentCo's removal of a customer-review right over its Information Security Program summary (p-175) is a minor scope trim that doesn't undercut the underlying security commitments. We used AgentCo's own DPA audit clause (Section 3.7, p-152) to formalize the SOC 2 offer from cmt-1076 -- see T-03."
+    },
+    {
+      "target": "p-176..p-183",
+      "decision": "accept",
+      "rule_ids": ["R-13"],
+      "reason": "Equipment pre-approval, source-code hardening/testing rights, and LargeCo's unilateral code-analysis right are exactly the category of controls that belong with privileged system access or future integrations, not this SaaS-access pilot where AgentCo has no access to LargeCo systems or facilities (cmt-805). The wholesale-deleted Security Audit Rights clause at p-183 is addressed separately below (counter) since AgentCo volunteered a SOC 2 alternative worth capturing in the Agreement."
+    },
+    {
+      "target": "p-183",
+      "decision": "counter",
+      "rule_ids": ["R-10", "R-18"],
+      "reason": "AgentCo rejected the entire Security Audit Rights clause outright rather than just the invasive elements, but also volunteered a SOC 2 report as an alternative (cmt-1076). That offer should be captured in the Agreement rather than left as an uncommitted comment -- see T-03 (implemented at p-152)."
+    },
+    {
+      "target": "p-184..p-193",
+      "decision": "accept",
+      "rule_ids": ["R-09"],
+      "reason": "Extending the security-flaw response commitment from 8 to 24 hours (p-180) is a reasonable accommodation for a smaller vendor and is distinct from Data Security Breach notification timing, addressed separately below. Breach investigation cooperation, credit monitoring (now made subject to the liability cap per AgentCo's edit), third-party beneficiary rights, the security manager designation, and the tracking-technology restrictions are all substantially adopted."
+    },
+    {
+      "target": "p-185..p-186",
+      "decision": "counter",
+      "rule_ids": ["R-09"],
+      "reason": "AgentCo doubled the breach-notification soft target (8 to 24 hours) and hard cap (24 to 48 hours) and dropped 'suspected' breaches and third-party claims/threats as triggers, with no stated rationale. We moved a tightened 24-hour, suspected-breach-inclusive notification duty into DPA Section 3.2 (p-142) since this section isn't independently addressable in the current draft -- see T-04."
+    },
+    {
+      "target": "p-194",
+      "decision": "accept",
+      "rule_ids": ["R-13"],
+      "reason": "Background-check requirements belong with privileged system/facility access, which AgentCo doesn't have for this SaaS-access pilot (cmt-1427)."
+    },
+    {
+      "target": "p-195..p-249",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "Schedule 1 processing details and the SLA/Support Policy exhibit heading are AgentCo's own template terms; substance is addressed in the next range."
+    },
+    {
+      "target": "p-249..p-354",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "AgentCo declined to adopt a bespoke enterprise SLA and instead offered its standard published support policy (cmt-1582). For a six-month, 150-user pilot this is proportionate -- the standard 99.9% uptime target and published severity/response framework are adequate for an evaluation deployment, and none of LargeCo's walk-away data-security or governance requirements depend on the SLA exhibit."
+    },
+    {
+      "target": "p-355..p-368",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "No substantive content in this stretch of the SLA exhibit."
+    },
+    {
+      "target": "p-369..p-376",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "Reduced per-occurrence/aggregate insurance limits ($2M rather than $5M) for Commercial General Liability and Workers' Compensation are proportionate for a Series A SaaS vendor at pilot scale."
+    },
+    {
+      "target": "p-377..p-394",
+      "decision": "counter",
+      "rule_ids": ["R-24"],
+      "reason": "Marking Contractors Pollution Liability as Not Applicable (p-383) is reasonable since AgentCo does no physical/environmental work. But the media-company coverage rider, the Commercial Crime loss-payee endorsement, and the Additional Insured/Waiver of Subrogation endorsements were deleted without any stated rationale and carry no marginal premium tied to policy limits -- addressed in T-07."
+    },
+    {
+      "target": "p-014",
+      "decision": "accept_with_edit",
+      "rule_ids": [],
+      "reason": "The Documentation definition substantively matches what LargeCo needs, but a merge artifact corrupted 'Customer' into 'ustomer' -- fixed in T-09."
+    },
+    {
+      "target": "cmt-408",
+      "decision": "accept",
+      "rule_ids": [],
+      "reason": "AgentCo's comment about clause grouping (disposal, injunctive relief) is an organizational preference; the underlying substantive rights (60-day export window, injunctive relief for confidentiality breach) are preserved regardless of how they're grouped, so no edit is needed."
+    }
+  ]
+}

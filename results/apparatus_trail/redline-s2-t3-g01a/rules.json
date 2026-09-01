@@ -1,0 +1,220 @@
+{
+  "rules": [
+    {
+      "id": "R-01",
+      "topic": "No training on LargeCo data",
+      "severity": "walk_away",
+      "position": "Provider's models must be pre-trained; Provider (and any subcontractor) may not use or process LargeCo data to train, build, or enhance AI/ML for any reason.",
+      "fallback": null,
+      "quote": "Provider represents and warrants that it shall and shall contractually obligate third parties to, not use or process LargeCo data to train, build, or enhance artificial intelligence or machine learning for any reason and such use case is expressly prohibited by this Agreement.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-02",
+      "topic": "Ownership of AI Inputs and AI Outputs",
+      "severity": "walk_away",
+      "position": "LargeCo retains all rights in AI Inputs and owns all AI Outputs; both are LargeCo Confidential Information and IP, and cannot be commingled with third-party data or used outside the scope of the Services.",
+      "fallback": null,
+      "quote": "LargeCo retains all rights in and to AI Inputs and will be the owner of all AI Outputs. All AI Inputs and AI Outputs shall be LargeCo’s Intellectual Property and Confidential Information.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-03",
+      "topic": "Third-party AI technology accountability",
+      "severity": "strong",
+      "position": "If Provider relies on third-party AI technology, Provider remains fully responsible for its performance/compliance, must have an enterprise-level agreement with the licensor at least as restrictive as this Agreement, give 30 days' notice of material changes, and cannot pass through additional terms to LargeCo.",
+      "fallback": null,
+      "quote": "maintain an enterprise-level written agreement with the licensor of such AI Technology that imposes obligations that are at least as restrictive as those imposed on or required of Provider under this Agreement; (d) provide at least thirty (30) days’ written notice and opportunity for LargeCo to object to any planned material changes in the use of AI Technology; and (e) shall not subject LargeCo to any additional terms not in this Agreement.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-04",
+      "topic": "Candidate/confidential data - no third-party disclosure or resale",
+      "severity": "walk_away",
+      "position": "Provider cannot share, sell, disclose, transfer, or exchange LargeCo confidential information (including candidate data) with any third party except as necessary to perform the Services, and cannot re-identify, market to, or contact candidates.",
+      "fallback": null,
+      "quote": "Provider shall not share, sell, disclose, transfer, provide, or exchange LargeCo’s Confidential Information collected or received hereunder to any third party for any purpose other than as necessary to perform the Services (and not, for example, and without limitation, to otherwise (re-)identify, market to, or contact a user or permit a third party to do the same).",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-05",
+      "topic": "Confidential information used only for the Services",
+      "severity": "walk_away",
+      "position": "Provider will not collect, access, use, disclose, process or retain LargeCo confidential information for any purpose other than performing the Services, and will not retarget, remarket, or profile users with it.",
+      "fallback": null,
+      "quote": "it will not collect (including, without limitation, caching or storing), access, use, disclose, process or retain LargeCo’s Confidential Information for any purpose other than that necessary to perform the Services",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-06",
+      "topic": "Ownership of Data and Deliverables",
+      "severity": "walk_away",
+      "position": "All right, title and interest in Data (including candidate materials, outputs, scorecards) and Deliverables remains with LargeCo; Provider gets only a narrow license needed to provide the Services and must assign back any rights it acquires.",
+      "fallback": null,
+      "quote": "All right, title, and interest in and to all Data and the Intellectual Property therein — including sole ownership — shall remain with LargeCo and its licensors.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-07",
+      "topic": "Data return/destruction on termination",
+      "severity": "strong",
+      "position": "LargeCo must be able to export Data for 60 days post-termination, and Provider must return or securely destroy all confidential information (with certification) once no longer needed.",
+      "fallback": null,
+      "quote": "Provider shall, and shall require its Agents to, either (at LargeCo’s election) return such Confidential Information to LargeCo through a secure method designated by LargeCo, or securely destroy it.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-08",
+      "topic": "Data security / encryption / access controls",
+      "severity": "strong",
+      "position": "Provider must maintain an Information Security Program with encryption at rest/in transit (min. 256-bit), restricted/least-privilege access, unique authentication, and prompt revocation on termination.",
+      "fallback": null,
+      "quote": "Provider shall securely store and agrees to strongly authenticate and secure in transmission all of LargeCo’s Confidential Information and shall encrypt LargeCo’s Confidential Information while at rest or in motion, including on portable devices or on portable media",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-09",
+      "topic": "Breach notification timing",
+      "severity": "strong",
+      "position": "Provider must notify LargeCo of a suspected data security breach using best efforts within 8 hours, and in no case more than 24 hours after detection or notice.",
+      "fallback": null,
+      "quote": "Provider shall use best efforts to notify LargeCo of the Data Security Breach within eight (8) hours after detecting or being notified of the Data Security Breach. Notwithstanding the foregoing, in no circumstances will more than twenty-four (24) hours elapse",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-10",
+      "topic": "Security audit rights",
+      "severity": "strong",
+      "position": "LargeCo (or its auditor) may audit Provider's security policies/practices around LargeCo confidential information at LargeCo's cost; Provider must remediate identified issues within specified timeframes.",
+      "fallback": null,
+      "quote": "Provider shall provide LargeCo, or an independent third-party auditor selected by LargeCo, access to, and the right to conduct a security audit of, all records, security policies and procedures, and other practices relating to the use, processing, storage and disclosure of LargeCo’s Confidential Information.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-11",
+      "topic": "Subcontractor/Agent flow-down",
+      "severity": "strong",
+      "position": "Any subcontractor/Agent with access to LargeCo confidential information must be bound by a written agreement at least as protective as this Agreement; Provider remains fully liable for Agents' acts.",
+      "fallback": null,
+      "quote": "Provider has entered into a fully-executed written agreement with each such Agent that imposes obligations on such Agent that are at least as restrictive on such Agent and at least as protective of LargeCo as those imposed on or required of Provider under this Agreement",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-12",
+      "topic": "International data transfer restriction",
+      "severity": "strong",
+      "position": "Provider cannot transfer or allow access to LargeCo confidential information from outside the United States unless LargeCo agrees in writing.",
+      "fallback": null,
+      "quote": "Provider shall not transfer LargeCo’s Confidential Information to, or allow access to LargeCo’s Confidential Information by, its employees or Agents in any location outside the United States unless agreed to in writing by LargeCo.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-13",
+      "topic": "Broader/privileged-access security controls scoped to future integrations",
+      "severity": "preference",
+      "position": "Heavier controls (source-code review, monthly scans, background checks, equipment approval, facility access) are appropriate only where Provider has privileged access to LargeCo systems or for future integrations — not required for the baseline pilot scope.",
+      "fallback": "Accept a narrowed version of these controls, or defer them to a future integration/expansion order form, rather than insisting on them for the initial pilot.",
+      "quote": "Broader controls like source-code review, monthly scans, background checks, equipment approval, or facility access should be reserved for future integrations or privileged access to LargeCo systems.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-14",
+      "topic": "Pilot scope limited to two approved workflows",
+      "severity": "walk_away",
+      "position": "The pilot must stay tied to candidate-material summaries and interview-note drafting; any expansion into ATS/HRIS integration, automated screening, candidate scoring, assessments, background checks, payroll, benefits, or sensitive HR data requires separate written approval, security review, and a scoped order form.",
+      "fallback": null,
+      "quote": "Any expansion into ATS/HRIS integrations, automated screening, candidate scoring, assessments, background checks, payroll, beneﬁts, or sensitive HR data should require separate written approval, security review, and a scoped order form.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-15",
+      "topic": "No autonomous employment decisions — human review required",
+      "severity": "walk_away",
+      "position": "TalentFlow must remain a decision-support tool; it cannot automatically rank, score, advance, reject, recommend, or make employment decisions without separate approval.",
+      "fallback": null,
+      "quote": "TalentFlow must remain a decision-support tool: it should not automatically rank, score, advance, reject, recommend, or make employment decisions without separate approval.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-16",
+      "topic": "No training, sale, or outside use of candidate data",
+      "severity": "walk_away",
+      "position": "LargeCo cannot approve terms allowing AgentCo to train on, sell, share, or use candidate data outside the TalentFlow service; candidate materials, prompts, notes, scorecards, job requirements, configurations, and customer-specific outputs must remain LargeCo-controlled information.",
+      "fallback": null,
+      "quote": "Candidate materials, prompts, notes, scorecards, job requirements, conﬁgurations, and customer-speciﬁc outputs should remain LargeCo-controlled information.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-17",
+      "topic": "Third-party AI provider / subprocessor transparency",
+      "severity": "strong",
+      "position": "LargeCo needs clear commitments on third-party AI providers, subprocessors, data flows, logging, retention, deletion, export rights, and breach notice; AgentCo must identify who can access candidate data, whether prompts/outputs are logged, retention duration, and whether any third-party AI provider can retain or review LargeCo content.",
+      "fallback": null,
+      "quote": "AgentCo should identify who can access candidate data, whether prompts or outputs are logged, how long data is retained, and whether any third-party AI provider can retain or review LargeCo content.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-18",
+      "topic": "Baseline security and privacy commitments for the pilot",
+      "severity": "strong",
+      "position": "LargeCo should require encryption, SSO, role-based access, audit logs, least-privilege access, annual security evidence, incident response, and prompt notice of security events for the pilot scope.",
+      "fallback": null,
+      "quote": "LargeCo should require encryption, SSO, role-based access, audit logs, least-privilege access, annual security evidence, incident response, and prompt notice of security events.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-19",
+      "topic": "Enhanced remedies for confidentiality/data/no-training breaches",
+      "severity": "strong",
+      "position": "A standard liability cap may be acceptable for ordinary service issues, but LargeCo should seek stronger remedies (e.g., higher or no cap) for confidentiality, candidate-data security, privacy, no-training breaches, and misuse of candidate data.",
+      "fallback": "Accept a standard fees-based cap for ordinary service issues if paired with a materially higher (or uncapped) carve-out for the enumerated breach categories.",
+      "quote": "A standard liability cap may be acceptable for ordinary service issues, but LargeCo should seek stronger remedies for conﬁdentiality, candidate-data security, privacy, no-training breaches, and misuse of candidate data.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-20",
+      "topic": "Commercial terms preserved",
+      "severity": "strong",
+      "position": "LargeCo should preserve clear pilot pricing, renewal terms, expansion mechanics, implementation milestones, invoicing rules, and the right to withhold disputed amounts.",
+      "fallback": null,
+      "quote": "LargeCo should preserve clear pilot pricing, renewal terms, expansion mechanics, implementation milestones, invoicing rules, and the right to withhold disputed amounts.",
+      "source": "Scenario_2_LargeCo.extracted.md"
+    },
+    {
+      "id": "R-21",
+      "topic": "Injunctive relief for confidentiality breach",
+      "severity": "strong",
+      "position": "A breach of confidentiality, data security, or the AI/data-use restrictions causes irreparable harm and entitles LargeCo to seek immediate injunctive relief without posting bond.",
+      "fallback": null,
+      "quote": "Provider acknowledges that any breach by it of this Agreement (including, without limitation, Section 4, Section 11, or Exhibit C) would cause LargeCo irreparable harm for which monetary damages would not afford adequate protection or appropriate compensation.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-23",
+      "topic": "AI training-data rights and platform security/monitoring warranty",
+      "severity": "strong",
+      "position": "Provider must warrant it has obtained and maintains all necessary rights, authorizations and consents to use any data used to create or train the AI Technology, must provide LargeCo information needed for transparency obligations, and must warrant the platform is developed/maintained using industry-standard methodologies and is regularly monitored and updated to remain robust, resilient, and secure.",
+      "fallback": "An unqualified warranty that the AI Technology 'will render accurate and reliable results' may be dropped where the tool is positioned as decision-support rather than an autonomous decision-maker, provided the training-data-rights and security/monitoring warranties are retained.",
+      "quote": "Provider further represents and warrants that it has obtained and maintains all necessary rights, authorizations and consents to use any data used in the creation or training of the AI Technology for the purpose of providing the Services. Provider shall provide LargeCo with any information needed regarding the AI Technology or the training data so that LargeCo can comply with any transparency or other obligations.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-24",
+      "topic": "Media-company insurance rider and risk-transfer endorsements",
+      "severity": "preference",
+      "position": "Given LargeCo's media/entertainment business, Provider's professional liability coverage should include the media-company rider (IP infringement, defamation, plagiarism, piracy, unfair competition, rights of publicity/privacy, false advertising), and all required insurance should include Additional Insured, Waiver of Subrogation, and primary/non-contributory endorsements in LargeCo's favor.",
+      "fallback": "Accept reduced per-occurrence/aggregate dollar limits appropriate to a Series A vendor and pilot-scale engagement, so long as the media-company coverage rider and the no-cost risk-transfer endorsements (Additional Insured, Waiver of Subrogation, primary/non-contributory, loss-payee where applicable) are preserved.",
+      "quote": "AS RELATES TO MEDIA COMPANIES coverage should include infringement or misappropriation of any intellectual property, copyright, trademarks, trade secrets, know-how and other present and future property and/or proprietary rights of a similar nature; breach of contract and unauthorize use of materials, defamation, plagiarism, piracy, unfair competition, rights of publicity or privacy or false advertising.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    },
+    {
+      "id": "R-22",
+      "topic": "Data segregation and use restriction (no derivative works from LargeCo confidential info)",
+      "severity": "walk_away",
+      "position": "Provider may not use, store, copy, analyze, monitor, or create derivative works from LargeCo's confidential information, or exploit it for Provider's or a third party's benefit, except to perform the Services.",
+      "fallback": null,
+      "quote": "Provider shall not, with respect to LargeCo’s Confidential Information or any portion thereof: (1) use, store, copy, analyze, monitor, create Derivative Works from, sell, lease, transfer, assign, redistribute, disclose, disseminate, or otherwise make it available to any third party in any manner; or (2) otherwise exploit it for the benefit of Provider or any third party.",
+      "source": "Copy_of_LargeCo_-_Saas_MSA_Playbook.docx.extracted.md"
+    }
+  ]
+}
