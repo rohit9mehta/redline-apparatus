@@ -41,6 +41,25 @@ class ApparatusClaudeCode(ClaudeCode):
         kwargs.setdefault("append_system_prompt", APPARATUS_PROTOCOL)
         super().__init__(*args, **kwargs)
 
+    def build_cli_flags(self) -> str:
+        """Like the base implementation, but shell-quotes values — the
+        stock renderer interpolates flag values into a bash command
+        unquoted, which breaks on any multi-line value (like our
+        appended system prompt)."""
+        parts: list[str] = []
+        for flag in self.CLI_FLAGS:
+            value = self._resolved_flags.get(flag.kwarg)
+            if value is None:
+                continue
+            if flag.format is not None:
+                parts.append(flag.format.format(value=shlex.quote(str(value))))
+            elif flag.type == "bool":
+                if value:
+                    parts.append(flag.cli)
+            else:
+                parts.append(f"{flag.cli} {shlex.quote(str(value))}")
+        return " ".join(parts)
+
     async def setup(self, environment) -> None:
         await super().setup(environment)
 
