@@ -89,7 +89,7 @@ The architecture transposes a pipeline I built for a different
 low-resource, high-precision domain: translating Sanskrit philosophical
 commentary, where every translation decision must cite the commentary that
 resolves it and every morphological claim is verified by a Pāṇinian
-derivation engine before it ships (live demo: Shastra <!-- TODO: Vercel URL -->).
+derivation engine before it ships.
 Commentary → playbook; cited apparatus → margin comments; grammar engine →
 deterministic contract checks. The follow-on in both domains is the same:
 a benchmark's deterministic checks + rubric judges are a *reward function*,
