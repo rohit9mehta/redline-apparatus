@@ -125,7 +125,7 @@ def surgicalness_table(runs_dir: Path, bench: Path, arm_labels: list[str],
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--model", default="anthropic/claude-sonnet-5")
+    ap.add_argument("--model", default="claude-sonnet-5")
     ap.add_argument("--arm", choices=list(ARMS), action="append",
                     help="restrict to one arm (repeatable); default both")
     ap.add_argument("--task", action="append",
