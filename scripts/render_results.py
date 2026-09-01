@@ -50,19 +50,19 @@ def main() -> int:
     if surg_path.exists():
         surg = json.loads(surg_path.read_text())
         print("\n### Behavioral profile (docx-level, deterministic — no judges)\n")
-        print("| actor | inline share | block share | events | tasks |")
-        print("|---|---|---|---|---|")
-        order = ["expert"] + [k for k in surg if k != "expert"]
+        print("| actor | inline share | block share | mean edit (chars) | events | tasks |")
+        print("|---|---|---|---|---|---|")
+        order = sorted(surg, key=lambda k: (not k.startswith("expert"), k))
         for actor in order:
             r = surg.get(actor)
             if not r:
                 continue
             print(f"| {actor} | {pct(r['inline_share'], 0)}% | "
-                  f"{pct(r['block_share'], 0)}% | {r['n_inline'] + r['n_block']} "
-                  f"| {r['n_tasks']} |")
-        print("\n*(attorney baseline from the benchmark's own "
-              "`attorney_redlines.docx` golden files; inline/block per the "
-              "benchmark's `docx_metrics.py`, threshold 30%)*")
+                  f"{pct(r['block_share'], 0)}% | {r.get('mean_event_chars', '—')} "
+                  f"| {r['n_inline'] + r['n_block']} | {r['n_tasks']} |")
+        print("\n*(attorney baseline: the represented side's attorney layers in "
+              "the benchmark's own `attorney_redlines.docx` golden files; "
+              "inline/block per the benchmark's `docx_metrics.py`, threshold 30%)*")
     return 0
 
 

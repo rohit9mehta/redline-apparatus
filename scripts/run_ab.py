@@ -33,10 +33,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from dataset import get_benchmark_dir            # noqa: E402  (vendor)
 import metrics_summary                           # noqa: E402  (vendor)
-from docx_metrics import (                       # noqa: E402  (vendor)
-    compute_surgicalness,
-    find_expert_docx_paths,
-)
+# docx_metrics (vendor) is imported lazily inside surgicalness_table.
 
 ARMS = {
     "baseline": "claude-code",
@@ -90,6 +87,10 @@ def run_arm(arm: str, tasks_path: Path, jobs_dir: Path, *, model: str,
         harbor, "run", "-p", str(tasks_path),
         "-a", ARMS[arm], "-m", model,
         "--n-concurrent", str(n_concurrent),
+        # Concurrent containers all download the agent installer; at
+        # n=4 the stock 360s setup timeout is too tight on home
+        # bandwidth. Setup timeouts happen before any model call.
+        "--agent-setup-timeout-multiplier", "4",
         "--jobs-dir", str(jobs_dir),
         "--env-file", str(env_file),
         "--yes", "--quiet",
@@ -149,16 +150,58 @@ def assemble_job(job_dir: Path, runs_dir: Path, *, model_id: str) -> int:
     return n
 
 
+def _surg_row(collected: list[dict]) -> dict:
+    kinds = [k for raw in collected for k in raw["event_kinds"]]
+    sizes = [s for raw in collected for s in raw["event_sizes"]]
+    n_inline = sum(1 for k in kinds if k == "inline")
+    n_block = sum(1 for k in kinds if k == "block")
+    total = n_inline + n_block
+    return {
+        "n_inline": n_inline,
+        "n_block": n_block,
+        "inline_share": round(n_inline / total, 4) if total else 0.0,
+        "block_share": round(n_block / total, 4) if total else 0.0,
+        "mean_event_chars": round(sum(sizes) / len(sizes), 1) if sizes else 0.0,
+        "n_tasks": len(collected),
+    }
+
+
 def surgicalness_table(runs_dir: Path, bench: Path, arm_labels: list[str],
                        task_names: list[str]) -> dict:
-    experts = find_expert_docx_paths(bench)
-    expert_paths = [experts[t] for t in task_names if t in experts]
-    by_model = {}
+    """Inline/block profile per actor, via the benchmark's own metric code.
+
+    Expert `attorney_redlines.docx` files are LAYERED on turns >= 2 (they
+    carry every prior turn's trainer edits), so the expert row filters to
+    the represented party's attorney layers per task ("Trainer N - <party>")
+    rather than counting the counterparty's seed edits as expert behavior.
+    Model rows filter to the task author ("Reviewing Counsel"), matching the
+    benchmark's own model-side filter."""
+    import tomllib
+
+    from docx_metrics import _collect_quality_for_docx
+
+    out: dict[str, dict] = {}
+    expert_collected = []
+    for t in task_names:
+        docx = bench / "tasks" / t / "tests" / "attorney_redlines.docx"
+        toml_p = bench / "tasks" / t / "task.toml"
+        if not docx.exists() or not toml_p.exists():
+            continue
+        party = tomllib.loads(toml_p.read_text())["metadata"]["represented_party"]
+        raw = _collect_quality_for_docx(docx, author_substring=f"- {party}")
+        if raw and raw["event_kinds"]:
+            expert_collected.append(raw)
+    out["expert (represented side)"] = _surg_row(expert_collected)
+
     for label in arm_labels:
-        paths = sorted((runs_dir / "trajectories" / label).glob("*/redline.docx"))
-        if paths:
-            by_model[label] = paths
-    return compute_surgicalness(by_model, expert_paths)
+        collected = []
+        for docx in sorted((runs_dir / "trajectories" / label).glob("*/redline.docx")):
+            raw = _collect_quality_for_docx(docx, author_substring="Reviewing Counsel")
+            if raw and raw["event_kinds"]:
+                collected.append(raw)
+        if collected:
+            out[label] = _surg_row(collected)
+    return out
 
 
 def main() -> int:
@@ -225,8 +268,8 @@ def main() -> int:
     print("\nSurgicalness (benchmark's own inline/block metric):")
     for actor, row in surg.items():
         print(f"  {actor:28} inline {row['inline_share']:.0%}  "
-              f"block {row['block_share']:.0%}  (n_events={row['n_inline'] + row['n_block']}, "
-              f"tasks={row['n_tasks']})")
+              f"block {row['block_share']:.0%}  mean {row['mean_event_chars']:.0f} ch  "
+              f"(n_events={row['n_inline'] + row['n_block']}, tasks={row['n_tasks']})")
     import json
     (work / "surgicalness.json").write_text(json.dumps(surg, indent=1))
     print(f"\nwrote {out} and {work / 'surgicalness.json'}")
