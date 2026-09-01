@@ -1,0 +1,16 @@
+[project]
+name = "redline-apparatus"
+version = "0.1.0"
+description = "Playbook-grounded, verifier-gated contract redlining agent for RedlineBench"
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+redline_apparatus = ["payload/*.py"]
