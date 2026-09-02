@@ -6,22 +6,41 @@ An A/B test on [RedlineBench](https://www.micro1.ai/benchmark/crosby-micro1-redl
 Crosby × micro1's contract-negotiation benchmark. Same model, same tasks,
 same judges. The only change is a process wrapper around the agent.
 
-## Result
+## TL;DR
 
-The wrapper made the AI **edit** like an attorney. Paragraph rewrites fell
-from 73% of edits to 45% (attorneys: 34%). Mean edit size fell from 352 to
-215 characters (attorneys: 84). All 127 playbook citations it produced were
-verbatim, none fabricated.
-
-It did **not** make the AI **judge** like an attorney. The attorney-rubric
-score went from 48.8 to 40.2, not significant at n = 8, with the drop
-concentrated in deal-closing orientation and predicting what the
-counterparty will accept. Legal correctness was flat. Over-acceptance did
-not improve.
-
-**Process fixes form. It does not fix judgment.** Judgment has to come from
-the model, which makes the benchmark's rubrics and checks a training
-signal, not just a scoreboard. See [docs/MEMO.md](docs/MEMO.md).
+- **Why.** Crosby's leaderboard tops out near 50, and Gemini Flash beats
+  Claude Opus, so the benchmark is not capability-bound. Its three published
+  failure modes (over-acceptance, heavy-handed edits, wrong priorities) read
+  like habits. If they are habits, a process wrapper should fix them at
+  inference with no training. If they are judgment, it will not. Either
+  answer is useful.
+- **What.** A controlled A/B on 8 RedlineBench tasks. Same model
+  (`claude-sonnet-5`), same tasks, same frozen 3-judge panel. The only
+  change is a wrapper that makes the agent quote the playbook verbatim,
+  write a ranked issue list, log an accept / reject / counter decision with
+  a reason for every counterparty edit, make small edits, and pass a
+  deterministic checker before it can finish.
+- **Editing behavior moved a lot.** Paragraph rewrites fell from 73% to 45%
+  (attorneys: 34%). Mean edit size fell from 352 to 215 characters
+  (attorneys: 84). 127 playbook citations, 0 fabricated. The plain baseline
+  reproduced Crosby's published frontier profile almost exactly.
+- **Judge scores did not improve.** 48.8 to 40.2, not significant at n = 8.
+  The drop sits in deal-closing orientation and counterparty-acceptance
+  prediction. Legal correctness flat. Over-acceptance did not improve.
+- **What it means.** One failure mode is a habit (edit form). Two are
+  judgment (over-acceptance, priorities). Process fixed the habit and did
+  not touch the judgment. If judgment could be prompted in, anyone with a
+  frontier API key could build this product. With a straightforward
+  scaffold, it cannot. Judgment has to come from the model, and training it
+  needs exactly what the benchmark contains: attorney rubrics with weights
+  plus deterministic document checks. That is a reward function, not just a
+  scoreboard. It is also a validity result for the benchmark: a reasonable
+  process hack did not move the rubric score.
+- **Caveats.** 8 tasks, one model, scenarios 1 and 2 only, one night. The
+  "accept needs a reason" rule probably made the agent too hawkish late in
+  the negotiation (biggest drop at turn 3). The claim is that one sensible
+  scaffold failed to buy judgment, not that none could. Full argument in
+  [docs/MEMO.md](docs/MEMO.md).
 
 ## The problem
 
