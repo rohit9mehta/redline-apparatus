@@ -149,7 +149,9 @@ not as a leaderboard entry.
 
 - `src/redline_apparatus/protocol.py`: the protocol appended to the system prompt
 - `src/redline_apparatus/payload/apparatus_gate.py`: the deterministic gate
-- `src/redline_apparatus/payload/docx_metrics.py`: vendored verbatim from the benchmark (MIT)
+- `src/redline_apparatus/payload/docx_metrics.py`: vendored verbatim from
+  [crosbylegal/redline-bench](https://github.com/crosbylegal/redline-bench)
+  (MIT, notice in `LICENSE.redline-bench` alongside it)
 - `scripts/run_ab.py`: A/B driver and aggregation
 - `results/`: scores, per-category tables, all 16 redlined .docx files
   (open in Word's Review pane), and the per-task audit trail (rule cards,
@@ -180,6 +182,11 @@ them with `--task` to match exactly. Requires Docker. The dataset
   results.
 - No training on the benchmark. With 3 scenarios, the benchmark is the
   test set.
+
+## License
+
+MIT. Contract documents under `results/` derive from the RedlineBench
+dataset (CC-BY-4.0, Crosby Legal).
 
 ## Origin
 
