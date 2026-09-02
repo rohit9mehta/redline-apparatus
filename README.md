@@ -1,83 +1,108 @@
 # redline-apparatus
 
-**A playbook-grounded, verifier-gated redlining agent for
-[RedlineBench](https://www.micro1.ai/benchmark/crosby-micro1-redlinebench)** —
-Crosby × micro1's multi-turn contract-negotiation benchmark.
+**Can a checklist and an automated checker make an AI negotiate contracts like a lawyer?**
 
-Every redlining decision must cite its authority, and a deterministic gate
-measures the output — with the benchmark's own metric code — before the agent
-is allowed to finish. Tasks, rubrics, and judges stay byte-identical to the
-published benchmark; everything here is agent-side.
+An A/B test on [RedlineBench](https://www.micro1.ai/benchmark/crosby-micro1-redlinebench),
+Crosby × micro1's contract-negotiation benchmark. Same model, same tasks,
+same judges. The only change is a process wrapper around the agent.
 
-## Why
+## Result
 
-RedlineBench's [published failure analysis](https://www.micro1.ai/benchmark/crosby-micro1-redlinebench)
-found that frontier models fail contract negotiation in three characteristic
-ways. Each is a grounding-and-verification failure, not an intelligence
-failure — and each maps to a mechanism in this agent:
+The wrapper made the AI **edit** like an attorney. Paragraph rewrites fell
+from 73% of edits to 45% (attorneys: 34%). Mean edit size fell from 352 to
+215 characters (attorneys: 84). All 127 playbook citations it produced were
+verbatim, none fabricated.
 
-| Published failure mode | Mechanism here |
+It did **not** make the AI **judge** like an attorney. The attorney-rubric
+score went from 48.8 to 40.2, not significant at n = 8, with the drop
+concentrated in deal-closing orientation and predicting what the
+counterparty will accept. Legal correctness was flat. Over-acceptance did
+not improve.
+
+**Process fixes form. It does not fix judgment.** Judgment has to come from
+the model, which makes the benchmark's rubrics and checks a training
+signal, not just a scoreboard. See [docs/MEMO.md](docs/MEMO.md).
+
+## The problem
+
+RedlineBench drops an agent into a live negotiation as in-house counsel for
+one side: here is the contract, your playbook, and the commercial context;
+return a Word file with tracked changes and margin comments. Three LLM
+judges grade it against attorney-written rubrics.
+
+Crosby's [published analysis](https://www.micro1.ai/benchmark/crosby-micro1-redlinebench)
+found frontier models fail in three ways:
+
+1. **Over-acceptance.** They accept counterparty edits they should fight
+   (80–99% pass on accept-rubrics, 6–50% on reject-rubrics).
+2. **Heavy-handed edits.** They rewrite paragraphs where attorneys change a
+   few words (62–81% block edits vs. 51%; 318–518-char edits vs. 101).
+3. **Wrong priorities.** They miss what attorneys treat as most important.
+
+## Why try process before training
+
+Crosby's leaderboard tops out near 50%, and a small fast model (Gemini 3.5
+Flash, 45.1%) outscores Claude Opus 4.8 (44.4%). When a small model beats a
+big one on a legal test, the benchmark is measuring something the models do
+not do by default, not raw capability. The three published failure modes
+read like habits: too agreeable, too heavy-handed, wrong priorities. Habits
+might be fixable with process, outside the weights. That is the cheapest
+possible fix if it works, and either outcome is useful. If scaffolding
+works, it is a product lever. If it does not, the gap is in the model's
+judgment, which points at training, and the benchmark's rubrics and checks
+are the training signal.
+
+The architecture was already built for another domain (see
+[Origin](#origin)), so the test cost one night.
+
+## The intervention
+
+`ApparatusClaudeCode` wraps Harbor's stock `claude-code` agent. No model
+change, no task change. It appends a protocol to the system prompt and
+installs a checker in the container. The agent must, in order:
+
+1. **Write the rules.** Distill the playbook into rule cards, each with a
+   verbatim quote from the playbook.
+2. **Triage before editing.** Rank every issue in the contract. Give every
+   counterparty edit a written decision, accept / reject / counter, with a
+   reason. Accepting requires an affirmative playbook-grounded reason.
+3. **Edit surgically.** Small in-sentence edits, not paragraph rewrites.
+4. **Pass the gate.** Run a deterministic checker before finishing. It fails
+   the run if any quote is not verbatim in the playbook, any major issue
+   has no edit, any reject/counter has no visible counter-move, any
+   counterparty edit lacks a decision, or the edits are not surgical by the
+   benchmark's own metric. Failures must be fixed and the gate re-run.
+
+Each mechanism targets one published failure mode:
+
+| Failure mode | Mechanism |
 |---|---|
-| **Over-acceptance bias** — models pass 80–99% of accept-rubrics but only 6–50% of reject-rubrics | Every counterparty tracked change and comment thread gets a written **disposition** (reject / counter / accept), and *accepting requires an affirmative playbook-grounded reason*. The gate fails the run if any counterparty change lacks one. |
-| **Lack of surgicalness** — 62–81% block edits vs. attorneys' 51%; mean edit 318–518 chars vs. attorneys' 101 | Drafting discipline in the protocol, then the gate measures the redline with the benchmark's own inline/block metric (`docx_metrics.py`, vendored verbatim) and fails runs that gut paragraphs. |
-| **Issue prioritization** — models miss what attorneys treat as most important | The playbook is compiled into **rule cards with verbatim quotes** (machine-audited against the grounding text — a paraphrase counts as a fabricated citation), and triage is a *written, cited artifact* produced before the first edit — not a plan "in your head". |
+| Over-acceptance | Written disposition on every counterparty change; accepting needs a grounded reason |
+| Heavy-handed edits | Drafting rules, then the gate measures surgicalness with the benchmark's own metric |
+| Wrong priorities | Triage is a written, cited artifact produced before the first edit |
 
-## How it works
+## The experiment
 
-`ApparatusClaudeCode` subclasses Harbor's stock `claude-code` agent and adds:
-
-1. **The Apparatus protocol** (`src/redline_apparatus/protocol.py`), appended
-   to the system prompt: rules → triage + dispositions → surgical drafting →
-   mandatory gate.
-2. **A pre-run environment setup** that snapshots the pristine contract
-   (so the gate can tell the agent's edits from the counterparty's) and
-   installs `apparatus_gate.py` in the container.
-
-The gate (`src/redline_apparatus/payload/apparatus_gate.py`) checks, all
-deterministically:
-
-| Check | What it enforces |
-|---|---|
-| V1 validity | docx loads; the agent actually produced attributed tracked changes |
-| S1 surgicalness | the benchmark's own inline/block metric + mean edit size |
-| P1/P2 phrases & voice | the brief's forbidden phrases (regex-scanned) and comment-voice rules |
-| C1 coverage | every tier-1/2 triage issue has a visible move at its paragraphs |
-| C2 dispositions | every counterparty revision/thread is covered by a written, grounded disposition |
-| C3 follow-through | every reject/counter has a tracked counter-edit or thread reply |
-| G1 citations | every playbook quote in the rule cards is verbatim in the grounding files |
-
-The agent must fix FAILs and re-run the gate before finishing. Apparatus
-artifacts (`rules.json`, `triage.json`, `gate_report.json`) are collected per
-trial — every edit in the apparatus arm traces to a machine-checked playbook
-citation.
+8 tasks: the first task in every scenario × turn cell for scenarios 1 and 2
+(4 turns, both sides). The subset rule was fixed before any run. Scenario 3
+was dropped for budget before any scenario-3 task ran. Each task ran twice,
+plain and wrapped, with `claude-sonnet-5` and the benchmark's frozen 3-judge
+panel. 16 trials total.
 
 ## Results
 
-A/B on an 8-task subset: the lexicographically first task in every
-scenario-1 and scenario-2 turn cell — 4 turns × both sides × two SaaS-MSA
-scenarios. The subset rule was fixed before any run; scenario 3 was dropped
-for budget before any scenario-3 task was run. Same frozen tasks, same
-frozen 3-judge panel, same model (`claude-sonnet-5`) — only the agent
-scaffold differs.
+### Editing behavior (measured from the .docx, no judges)
 
-**The scaffold closed the form gap, not the judgment gap.** That split is
-the finding.
-
-### Behavioral profile (deterministic, docx-level — no judges)
-
-| actor | inline share | block share | mean edit (chars) |
+| actor | inline edits | paragraph rewrites | mean edit (chars) |
 |---|---|---|---|
-| attorney (represented side, golden files) | 66% | 34% | 84 |
+| attorneys (golden files, represented side) | 66% | 34% | 84 |
 | claude-code baseline | 27% | 73% | 352 |
 | **+ apparatus** | **55%** | **45%** | **215** |
 
-The baseline reproduces the published frontier failure profile almost
-exactly (62–81% block edits, 318–518-char means). The apparatus arm moves
-most of the way to attorney drafting norms — and every one of its 127
-playbook rule-card quotes across the grid verified verbatim against the
-grounding text (0 fabricated), with 8/8 final gate reports PASS, 83 triaged
-issues, and 259 clause-level dispositions collected as machine-checkable
-artifacts.
+The baseline reproduces Crosby's published frontier profile almost exactly.
+The wrapped agent moves most of the way to attorney norms. Across the 8
+tasks: 127 rule-card quotes, 0 fabricated; 83 triaged issues; 259
+clause-level dispositions; 8/8 gates PASS.
 
 ### Judge panel (attorney rubrics, 3-judge majority)
 
@@ -86,26 +111,49 @@ artifacts.
 | claude-code baseline | 48.8 | 31.5–65.6 |
 | + apparatus | 40.2 | 26.7–52.8 |
 
-No improvement — a statistically indistinguishable decline at n = 8 input
-groups, concentrated in the *strategic* categories (deal-closing
-orientation 65→22, counterparty-acceptance prediction 50→25) while legal
-correctness stayed flat (54→49). An exploratory cut over reject-shaped
-rubrics shows the over-acceptance bias did not improve either.
+| rubric category | baseline | + apparatus |
+|---|---|---|
+| Legal correctness | 54 | 49 |
+| Commercial context | 34 | 29 |
+| Negotiation quality | 50 | 38 |
+| Counterparty acceptance prediction | 50 | 25 |
+| Deal-closing orientation | 65 | 22 |
 
-### Reading
+No improvement. The intervals overlap heavily, so this is not a real
+decline at n = 8, but it is clearly not a win. The drop sits in the
+strategic categories. Legal correctness is flat.
 
-Deterministic verification moved everything deterministic verifiers can
-see: edit shape, citation integrity, coverage, disposition discipline.
-It did not move — and slightly taxed — the strategic judgment the rubrics
-actually grade. **RedlineBench's rubric layer resisted process
-scaffolding**, which is exactly what a good benchmark should do, and it
-sharpens where the remaining gap lives: not in drafting mechanics, but in
-negotiation judgment. That is a *training-signal* problem, not a
-prompting problem — see [docs/MEMO.md](docs/MEMO.md).
+## What this means
 
-Full outputs: [`results/`](results/) — metrics summary, per-category
-tables, behavioral profiles, all 16 redlined .docx files (open them in
-Word's Review pane), and the apparatus audit trail per task.
+- **Deterministic verification bought everything a verifier can see:**
+  edit shape, citation integrity, issue coverage, a written decision on
+  every counterparty change.
+- **It bought none of the judgment the rubrics grade:** when to fight, when
+  to fold, what the other side will accept.
+- **A likely self-inflicted wound.** Requiring a reason to accept biases the
+  agent toward fighting. The biggest drop is at turn 3 (52.9 to 35.4),
+  where the deal should be closing. The protocol was probably too hawkish
+  late in the negotiation.
+- **The benchmark held.** Its rubric layer resisted process scaffolding,
+  which is what a good benchmark should do. The remaining gap is in
+  negotiation judgment, not drafting mechanics. That is a training-signal
+  problem, not a prompting problem.
+
+## Caveats
+
+8 tasks, one model, two of three scenarios, one night. Treat this as a
+controlled pilot that diagnoses which failure modes are process-fixable,
+not as a leaderboard entry.
+
+## Repo layout
+
+- `src/redline_apparatus/protocol.py`: the protocol appended to the system prompt
+- `src/redline_apparatus/payload/apparatus_gate.py`: the deterministic gate
+- `src/redline_apparatus/payload/docx_metrics.py`: vendored verbatim from the benchmark (MIT)
+- `scripts/run_ab.py`: A/B driver and aggregation
+- `results/`: scores, per-category tables, all 16 redlined .docx files
+  (open in Word's Review pane), and the per-task audit trail (rule cards,
+  triage + dispositions, gate report)
 
 ## Reproduce
 
@@ -115,31 +163,31 @@ uv venv .venv && source .venv/bin/activate
 uv pip install -e "vendor/redline-bench[docx]" -e . harbor
 cp vendor/redline-bench/.env.template .env   # add your provider keys
 python scripts/run_ab.py --smoke             # 1 task, both arms
-python scripts/run_ab.py                     # 12-task subset, both arms
+python scripts/run_ab.py                     # 12-task subset (all 3 scenarios), both arms
 ```
 
-Requires Docker. The benchmark dataset (CC-BY-4.0) downloads automatically
-from [`crosbylegal/RedlineBench`](https://huggingface.co/datasets/crosbylegal/RedlineBench).
+The published results are the 8 scenario-1/2 tasks of that subset; pass
+them with `--task` to match exactly. Requires Docker. The dataset
+(CC-BY-4.0) downloads automatically from
+[Hugging Face](https://huggingface.co/datasets/crosbylegal/RedlineBench).
 
 ## Integrity
 
-- **Task bundles, rubrics, and judge code are never modified** — the agent
-  intervention is an appended system prompt plus files staged under
-  `/app/.apparatus/` in the container.
-- **No training on the benchmark.** This is scaffolding only.
-- `src/redline_apparatus/payload/docx_metrics.py` is vendored verbatim from
-  [crosbylegal/redline-bench](https://github.com/crosbylegal/redline-bench)
-  (MIT) so surgicalness is measured with the benchmark's exact definitions.
+- Tasks, rubrics, and judge code are byte-identical to the published
+  benchmark. The intervention is an appended system prompt plus files
+  staged under `/app/.apparatus/` in the container.
+- Subset chosen by rule before any run. No task selection after seeing
+  results.
+- No training on the benchmark. With 3 scenarios, the benchmark is the
+  test set.
 
-## Where this comes from
+## Origin
 
-The architecture transposes a pipeline I built for a different
-low-resource, high-precision domain: translating Sanskrit philosophical
-commentary, where every translation decision must cite the commentary that
-resolves it and every morphological claim is verified by a Pāṇinian
-derivation engine before it ships.
-Commentary → playbook; cited apparatus → margin comments; grammar engine →
-deterministic contract checks. The follow-on in both domains is the same:
-a benchmark's deterministic checks + rubric judges are a *reward function*,
-which is how you distill a small, cheap model that holds the frontier line —
-see `docs/MEMO.md`.
+The architecture is transposed from a pipeline for translating Sanskrit
+philosophical commentary, where every translation decision cites the
+commentary that resolves it and every grammatical claim is verified by a
+derivation engine before it ships. Commentary becomes playbook; cited
+apparatus becomes margin comments; grammar engine becomes deterministic
+contract checks. The follow-on is the same in both domains: use the
+deterministic checks plus rubric judges as a reward function to distill a
+small, cheap model. See [docs/MEMO.md](docs/MEMO.md).
